@@ -1,0 +1,10 @@
+{
+  "name": "enzovo_chat",
+  "private": true,
+  "description": "Agentic e-commerce support chatbot: multi-agent LangGraph + MCP + RAG + memory on local Qwen",
+  "scripts": {
+    "setup": "npm ci --prefix backend && npm ci --prefix frontend && npm run db:seed --prefix backend",
+    "dev": "npm run dev --prefix backend & npm run dev --prefix frontend & wait",
+    "ci": "npm run ci --prefix backend && npm run build --prefix frontend"
+  }
+}
