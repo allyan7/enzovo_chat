@@ -37,6 +37,7 @@ export const State = Annotation.Root({
 type S = typeof State.State;
 
 const lastHuman = (msgs: BaseMessage[]) => String([...msgs].reverse().find((m) => m instanceof HumanMessage)?.content ?? '');
+const ACTION_ASK = /\b(cancel|buy|purchase|place|order it)\b/i;
 const transcript = (msgs: BaseMessage[], n: number) =>
 	msgs.slice(-n).map((m) => `${m instanceof HumanMessage ? 'Customer' : 'Assistant'}: ${m.content}`).join('\n');
 
@@ -63,8 +64,23 @@ async function specialist(s: S, config: RunnableConfig) {
 		prompt: agentPrompt(agent, s.memory, s.activeOrderId),
 	});
 	// Only the last few user-facing turns: keeps a 14B model's context small.
-	const out = await react.invoke({ messages: s.messages.slice(-6) }, config);
-	const newMsgs: BaseMessage[] = out.messages.slice(Math.min(6, s.messages.length));
+	const input = s.messages.slice(-6);
+	let out = await react.invoke({ messages: input }, config);
+	let newMsgs: BaseMessage[] = out.messages.slice(input.length);
+
+	// Action guard: small models sometimes SAY "cancelled" without calling the
+	// tool. If the customer asked for an action and no tool ran, retry once
+	// with an explicit nudge. Never trust a claimed action without a tool call.
+	const calledTool = newMsgs.some((m) => (m as AIMessage).tool_calls?.length);
+	if (!calledTool && agent === 'order' && ACTION_ASK.test(lastHuman(s.messages))) {
+		const nudge = new HumanMessage(`You did not call any tool, so nothing happened. Call the right tool now${s.activeOrderId ? ` (the order is ${s.activeOrderId})` : ''}.`);
+		out = await react.invoke({ messages: [...input, ...newMsgs, nudge] }, config);
+		newMsgs = out.messages.slice(input.length + newMsgs.length + 1);
+		if (!newMsgs.some((m) => (m as AIMessage).tool_calls?.length)) {
+			newMsgs = [new AIMessage("Sorry, I couldn't complete that. Please try again, mentioning the order id.")];
+			out = { ...out, messages: [...out.messages, ...newMsgs] };
+		}
+	}
 	const toolText = newMsgs.filter((m) => m.getType() === 'tool').map((m) => String(m.content)).join(' ');
 	const orderIds = toolText.match(/ORD-\d+/g);
 	return {

@@ -30,7 +30,9 @@ const ROLE: Record<AgentName, string> = {
 - "Where is my order": call track_order with no order_id.
 - Buying: find the product (search_products), call quote_order (payment_method from the customer's words, else memory's preferred_payment, else "wallet"), then call place_order with the quote_id. The system asks the customer to confirm; do not ask yourself.
 - Cancelling: call cancel_order; if the order is ambiguous, use the order being discussed.
-After a successful action, give the order id and what happens next.`,
+- You can only change an order by calling a tool. Never say an order is placed or cancelled unless the tool result says so.
+After place_order, report from the tool result: order id, total, how much came from the wallet, wallet balance after, delivery date.
+After cancel_order, report the refund amount and where it goes, from the tool result.`,
 	payments: `You handle wallet, refunds, returns and failed payments. Use get_refund_status for any refund or "money deducted" question, get_wallet for balance and "why was X deducted", get_return_status / check_return_eligibility for returns. Explain status, amount, where the money went, and the expected-by date.`,
 	policy: `You answer store-policy questions. Always call search_policies, answer only from the returned text, and cite the section like (returns-and-refunds §1).`,
 };

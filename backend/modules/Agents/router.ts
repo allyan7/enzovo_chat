@@ -19,7 +19,13 @@ export function keywordRoute(text: string): AgentName[] {
 	return RULES.filter(([, re]) => re.test(text)).map(([a]) => a);
 }
 
+// Buying or cancelling is one job for the order agent, even when the message
+// says "from my wallet". A parallel payments agent only adds a confusing
+// second answer (seen in testing: it reported the old balance as the price).
+const ACTION = /\b(buy|purchase|order (it|this|that)|place (an |the )?order|cancel)\b/i;
+
 export async function route(text: string, recentContext: string): Promise<AgentName[] | 'none'> {
+	if (ACTION.test(text)) return ['order'];
 	// Fast path: a short message that clearly matches ONE agent skips the LLM
 	// router entirely (saves a full model call). Ambiguous or multi-intent
 	// messages, and follow-ups like "cancel it", still go to the LLM.

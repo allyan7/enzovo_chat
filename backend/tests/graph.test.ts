@@ -30,6 +30,44 @@ class ScriptedModel extends BaseChatModel {
 	}
 }
 
+describe('action guard', () => {
+	it('does not claim a cancel when the model never calls the tool', async () => {
+		seed(getDb());
+		setChatModelFactory(() => new ScriptedModel([
+			new AIMessage('Order ORD-1004 has been cancelled.'), // lie, no tool
+			new AIMessage('It is cancelled now.'),                 // lies again after the nudge
+		]));
+		const r = await chat({ customerId: 'CUST-001', threadId: 'guard', message: 'cancel order ORD-1004' });
+		expect(r.reply).toMatch(/couldn't complete/);
+		const row: any = getDb().prepare("SELECT status FROM orders WHERE id = 'ORD-1004'").get();
+		expect(row.status).toBe('confirmed');
+	}, 60_000);
+});
+
+describe('action guard + confirmation', () => {
+	it('nudges a lazy model into the tool, then confirmation still works', async () => {
+		seed(getDb());
+		setChatModelFactory(() => new ScriptedModel([
+			new AIMessage('Done, it is cancelled.'), // no tool -> nudge
+			new AIMessage({ content: '', tool_calls: [{ id: 'g1', name: 'cancel_order', args: { order_id: 'ORD-1004' } }] }),
+			new AIMessage('Cancelled ORD-1004.'),
+		]));
+		const first = await chat({ customerId: 'CUST-001', threadId: 'guard2', message: 'cancel order ORD-1004' });
+		expect(first.confirmation).toMatchObject({ tool: 'cancel_order' });
+		const second = await chat({ customerId: 'CUST-001', threadId: 'guard2', confirm: { approved: true } });
+		const row: any = getDb().prepare("SELECT status FROM orders WHERE id = 'ORD-1004'").get();
+		expect(row.status).toBe('cancelled');
+		expect(second.reply).toBeTruthy();
+	}, 60_000);
+});
+
+describe('router', () => {
+	it('sends buy-from-wallet only to the order agent', async () => {
+		const { route } = await import('../modules/Agents/router.js');
+		expect(await route('Buy OnePlus 13R from my wallet', '')).toEqual(['order']);
+	});
+});
+
 describe('multi-agent graph with confirmation', () => {
 	it('pauses before cancel_order, then cancels after approval', async () => {
 		seed(getDb());
