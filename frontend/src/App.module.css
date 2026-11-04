@@ -1,0 +1,8 @@
+.shell { height: 100vh; display: flex; flex-direction: column; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; border-bottom: 1px solid var(--border); }
+.brand { font-weight: 700; font-size: 18px; }
+.brand span { color: var(--accent); margin-left: 2px; }
+.controls { display: flex; gap: 8px; }
+.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.main { flex: 1; display: grid; grid-template-columns: 1fr 300px; min-height: 0; }
+@media (max-width: 760px) { .main { grid-template-columns: 1fr; } .main > aside { display: none; } }
