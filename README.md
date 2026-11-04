@@ -71,7 +71,7 @@ All scenarios with expected answers: [`backend/models/seed/README.md`](backend/m
 
 ## Evals
 
-`npm run eval --prefix backend -- -k 3` runs 19 scored conversations against the real model: right agent, right tool, correct facts, no leaks. It reports **pass^k** (a scenario counts only if all k runs pass, as in τ-bench) and writes [`backend/evals/RESULTS.md`](backend/evals/RESULTS.md).
+`npm run eval --prefix backend -- -k 3` runs 19 scored conversations against the real model: right agent, right tool, correct facts, no leaks. It reports **pass^k** (a scenario counts only if all k runs pass, as in τ-bench) and writes the results table to `backend/evals/RESULTS.md`.
 
 ## What a real local model got wrong
 

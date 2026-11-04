@@ -71,7 +71,7 @@ Read top to bottom once, then use the headings as a revision sheet. Every sectio
 - **Guardrails:** identity from session; ownership in SQL (other customer's order = "not found"); off-topic → `none` route; prompt rule to ignore discount/jailbreak requests; zod validation on every input; qty limit 3.
 - **Local LLM:** Ollama `qwen2.5:14b`, temperature 0, JSON mode for routing, short prompts, small tool lists, keyword fallback when JSON fails. Swap model via `LLM_MODEL` in `.env`.
 - **Observability:** each reply returns `trace {agents, tools}` and latency, shown in the UI. Production: Langfuse/LangSmith tracing.
-- **Testing:** 20 tests, no LLM: business rules, MCP protocol, stdio tool groups, and the **full graph with a scripted model** including interrupt/resume (`tests/graph.test.ts`).
+- **Testing:** 27 tests, no LLM: business rules, MCP protocol, stdio tool groups, and the **full graph with a scripted model** including interrupt/resume (`tests/graph.test.ts`).
 - **CI/CD:** `ci.yml` (seed validation, typecheck, tests, frontend build) on every push/PR; `cd.yml` builds a Docker image (API + UI) and pushes to GHCR after CI passes on main.
 
 ## 8b. Bugs found with the real model (and the lesson from each)
@@ -95,6 +95,9 @@ How to debug: open `backend/checkpoints.db`, table `writes`, filter by `thread_i
 6. **How do you evaluate it?** Scenario suite (`backend/models/seed/README.md`) scored on right agent, right tool, correct facts, number of turns; pass^k for consistency (τ-bench idea).
 7. **Latency?** Single-agent replies skip synthesis; router is one short call; memory extraction is async; production would use a smaller router model and streaming.
 8. **Why SQLite?** Zero setup on a laptop, real transactions, WAL for multi-process. Swap for Postgres in production.
+
+## 9b. Evals
+`npm run eval --prefix backend -- -k 3`: 19 scored conversations (product, order, payments, policy, multi-intent, guardrails) against the real model. Checks agents, tools, facts and leaks, re-seeds per run, reports pass^k (τ-bench style). Scenarios: `backend/evals/scenarios.ts`.
 
 ## 10. Production next steps (say these, don't build them)
 Real JWT auth · REST/gRPC services behind MCP · Postgres + pgvector · Langfuse traces · eval suite in CI with a hosted model · streaming responses · returns/exchange write tools · rate limiting · PII redaction in logs.
