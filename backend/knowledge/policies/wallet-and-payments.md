@@ -1,12 +1,12 @@
-# Kartly Wallet and Payments Policy
+# enzovo Wallet and Payments Policy
 
 Effective: 1 July 2026.
 
-## 1. Kartly Wallet basics
+## 1. enzovo Wallet basics
 
 - The wallet holds two kinds of balance:
   - **Cash balance**: money added by the customer, refunds and cashback. Does not expire.
-  - **Promo credit**: promotional credit from Kartly. Expires on the date shown, can pay for at most 10% of an order's value, and cannot be withdrawn.
+  - **Promo credit**: promotional credit from enzovo. Expires on the date shown, can pay for at most 10% of an order's value, and cannot be withdrawn.
 - Balance limits: ₹10,000 for minimum-KYC accounts, ₹2,00,000 for full-KYC accounts.
 - Money can be added by UPI, card or net banking.
 
@@ -25,9 +25,9 @@ Effective: 1 July 2026.
 
 ## 4. Payment failed but money was debited
 
-Sometimes the bank debits the money but the payment does not reach Kartly (for example, a timeout). In this case:
+Sometimes the bank debits the money but the payment does not reach enzovo (for example, a timeout). In this case:
 - No order is created.
-- Kartly's payment gateway starts an automatic reversal right away.
+- enzovo's payment gateway starts an automatic reversal right away.
 - The bank returns the money within **5 business days**. The expected date is shown in the order details along with the bank reference number (RRN).
 - If it has not arrived by then, the customer can contact support with the RRN.
 

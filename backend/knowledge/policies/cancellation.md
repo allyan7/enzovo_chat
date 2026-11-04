@@ -1,4 +1,4 @@
-# Kartly Cancellation Policy
+# enzovo Cancellation Policy
 
 Effective: 1 July 2026.
 
@@ -24,9 +24,9 @@ If a shipment has not been delivered **7 days after its original expected delive
 
 Individual items in a multi-item order can be cancelled before dispatch. Coupon discounts are split across items as described in the Returns and Refunds Policy, section 7.
 
-## 5. Cancellations by Kartly
+## 5. Cancellations by enzovo
 
-Kartly may cancel an order if the item goes out of stock, the address is not serviceable, or the payment is flagged as suspicious. The customer receives a full refund to the original method.
+enzovo may cancel an order if the item goes out of stock, the address is not serviceable, or the payment is flagged as suspicious. The customer receives a full refund to the original method.
 
 ## 6. Cancelling through the support chatbot
 

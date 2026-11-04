@@ -1,6 +1,6 @@
-# Kartly Returns, Replacements and Refunds Policy
+# enzovo Returns, Replacements and Refunds Policy
 
-Effective: 1 July 2026. Applies to all orders on Kartly (a fictional store used for this POC).
+Effective: 1 July 2026. Applies to all orders on enzovo (a fictional store used for this POC).
 
 ## 1. Return windows by category
 
@@ -14,12 +14,12 @@ Effective: 1 July 2026. Applies to all orders on Kartly (a fictional store used 
 
 The window is counted in calendar days starting the day after delivery. Example: an item delivered on 29 October can be returned or replaced up to and including 5 November.
 
-After the window closes, defects are covered by the manufacturer's warranty. Kartly will share the nearest authorised service centre but cannot accept the return.
+After the window closes, defects are covered by the manufacturer's warranty. enzovo will share the nearest authorised service centre but cannot accept the return.
 
 ## 2. Mobiles: replacement rules
 
 1. A mobile is replaced only if it is defective, arrived damaged, or is not what was ordered.
-2. Kartly may run a remote diagnosis (a guided check over a call or app) before approving.
+2. enzovo may run a remote diagnosis (a guided check over a call or app) before approving.
 3. The phone must be returned with its box, all in-box accessories and invoice, with no physical damage.
 4. The customer must factory reset the phone and remove any account lock (Google account / iCloud Find My).
 5. Replacement is done as **exchange on delivery**: the technician checks the old phone at the door and hands over the new unit in the same visit.
@@ -35,7 +35,7 @@ After the window closes, defects are covered by the manufacturer's warranty. Kar
 ## 4. Where the refund goes
 
 - By default, the refund goes back to the **original payment method**.
-- The customer can choose **Kartly Wallet** instead when raising the return or cancellation. This is the fastest option.
+- The customer can choose **enzovo Wallet** instead when raising the return or cancellation. This is the fastest option.
 - The wallet portion of any payment always goes back to the wallet.
 - COD orders: refund to wallet, or to a verified bank account by NEFT.
 - Once a refund has been sent to the bank or card, it cannot be switched to the wallet (unless it fails, see section 6).
@@ -44,7 +44,7 @@ After the window closes, defects are covered by the manufacturer's warranty. Kar
 
 | Destination | Time to reflect |
 |---|---|
-| Kartly Wallet | Within 2 hours |
+| enzovo Wallet | Within 2 hours |
 | UPI | 2–4 business days |
 | Credit / debit card | 5–7 business days |
 | Net banking | 5–7 business days |
@@ -54,7 +54,7 @@ Business days exclude Saturdays, Sundays and bank holidays. Each refund has an *
 
 ## 6. Failed refunds
 
-If a refund to the original method fails (for example, the card was closed or the bank account is inactive), Kartly automatically credits the full amount to the customer's **Kartly Wallet within 2 business days** of the failure and notifies the customer. The customer can then ask support to move it to a verified bank account.
+If a refund to the original method fails (for example, the card was closed or the bank account is inactive), enzovo automatically credits the full amount to the customer's **enzovo Wallet within 2 business days** of the failure and notifies the customer. The customer can then ask support to move it to a verified bank account.
 
 ## 7. Partial returns, coupons and cashback
 
@@ -65,8 +65,8 @@ If a refund to the original method fails (for example, the card was closed or th
 ## 8. Delayed refund — what the customer can do
 
 If the expected-by date has passed and the money has not arrived:
-1. Check the bank or card statement using the reference number (RRN or ARN) shared by Kartly.
-2. Contact support; Kartly raises a trace request with the bank and resolves it within 3 business days.
+1. Check the bank or card statement using the reference number (RRN or ARN) shared by enzovo.
+2. Contact support; enzovo raises a trace request with the bank and resolves it within 3 business days.
 
 ## 9. Non-returnable situations
 

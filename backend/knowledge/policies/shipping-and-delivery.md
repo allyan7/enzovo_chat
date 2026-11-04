@@ -1,4 +1,4 @@
-# Kartly Shipping and Delivery Policy
+# enzovo Shipping and Delivery Policy
 
 Effective: 1 July 2026.
 
