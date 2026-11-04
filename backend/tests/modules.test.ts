@@ -16,6 +16,12 @@ beforeEach(() => {
 	seed(db);
 });
 
+describe('Seed', () => {
+	it('can re-seed a database that already has data', () => {
+		expect(() => seed(db)).not.toThrow();
+	});
+});
+
 describe('Catalog', () => {
 	it('lists trending phones by 7-day sales', () => {
 		const r = searchProducts(as('CUST-001'), { category: 'mobiles', sort: 'trending', limit: 3 });

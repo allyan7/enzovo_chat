@@ -17,7 +17,9 @@ const TABLES = [
 
 export function seed(db: DB) {
 	db.transaction(() => {
-		for (const t of TABLES) db.prepare(`DELETE FROM ${t}`).run();
+		// Delete children before parents (wallets → customers): better-sqlite3
+		// enforces foreign keys by default, so the order matters on a re-seed.
+		for (const t of [...TABLES].reverse()) db.prepare(`DELETE FROM ${t}`).run();
 
 		const ip = db.prepare(`INSERT INTO products VALUES (@id,@title,@brand,
 			@category,@price,@mrp,@rating,@rating_count,@units_sold_7d,@views_7d,
