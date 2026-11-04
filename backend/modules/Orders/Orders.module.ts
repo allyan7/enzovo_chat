@@ -9,7 +9,7 @@ import { addBusinessDays, addDays, dateOnly, nowIso } from '../../utils/dates.js
 import { config } from '../../configs/app.config.js';
 import { getWalletRow, walletMove } from '../Payments/Payments.module.js';
 
-const CLOSED = ['delivered', 'cancelled', 'returned', 'payment_failed'];
+const CLOSED = ['delivered', 'cancelled', 'returned', 'return_in_progress', 'payment_failed'];
 
 function getCustomer({ db, customerId }: Ctx): Customer {
 	const r: any = db.prepare('SELECT data FROM customers WHERE id = ?').get(customerId);

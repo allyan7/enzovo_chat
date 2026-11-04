@@ -86,6 +86,10 @@ describe('Payments', () => {
 		expect(r.failed_payment_reversals[0]).toMatchObject({ amount: 1799, reversal_expected_by: '2026-11-09' });
 		expect(r.refunds[0]).toMatchObject({ refund_id: 'RFD-2002', is_delayed: false });
 	});
+	it('allows returning defective AirPods within 10 days', () => {
+		const r = checkReturnEligibility(as('CUST-004'), 'ORD-4003');
+		expect(r.items![0]).toMatchObject({ category: 'audio', last_day: '2026-11-07', eligible: true });
+	});
 	it('applies the 7-day return window for phones', () => {
 		const r = checkReturnEligibility(as('CUST-003'), 'ORD-3001');
 		expect(r.items![0]).toMatchObject({ last_day: '2026-09-15', eligible: false });

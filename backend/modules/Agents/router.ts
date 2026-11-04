@@ -12,7 +12,7 @@ const RULES: [AgentName, RegExp][] = [
 	['payments', /refund|wallet|balance|deduct|charged|cashback|return|replace|money/i],
 	['order', /order|track|deliver|arriv|where is|cancel|buy|purchase|place/i],
 	['policy', /policy|cod\b|emi|window|charges|how long|rules?/i],
-	['product', /products?|catalog|sell|brands?|phone|mobile|trending|rated|stars?|price|under|cheap|best|compare|case|charger|earbud|stock/i],
+	['product', /products?|catalog|tablets?|ipad|laptops?|macbook|watch(es)?|headphones?|airpods|sell|brands?|phone|mobile|trending|rated|stars?|price|under|cheap|best|compare|case|charger|earbud|stock/i],
 ];
 
 export function keywordRoute(text: string): AgentName[] {

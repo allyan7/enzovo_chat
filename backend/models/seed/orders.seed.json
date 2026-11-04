@@ -1,104 +1,557 @@
 [
   {
-    "id": "ORD-1001", "customer_id": "CUST-001", "placed_at": "2026-10-08T19:42:00+05:30", "status": "delivered", "delivered_at": "2026-10-11T14:20:00+05:30",
+    "id": "ORD-1001",
+    "customer_id": "CUST-001",
+    "placed_at": "2026-10-08T19:42:00+05:30",
+    "status": "delivered",
+    "delivered_at": "2026-10-11T14:20:00+05:30",
     "address_id": "ADDR-001-H",
     "items": [
-      { "product_id": "P101", "title": "Samsung Galaxy S24 (8GB/128GB)", "color": "Onyx Black", "qty": 1, "unit_price": 64999 },
-      { "product_id": "A201", "title": "Samsung Galaxy S24 Silicone Case", "qty": 1, "unit_price": 1499 }
+      {
+        "product_id": "P101",
+        "title": "Samsung Galaxy S24 (8GB/128GB)",
+        "color": "Onyx Black",
+        "qty": 1,
+        "unit_price": 64999
+      },
+      {
+        "product_id": "A201",
+        "title": "Samsung Galaxy S24 Silicone Case",
+        "qty": 1,
+        "unit_price": 1499
+      }
     ],
-    "pricing": { "subtotal": 66498, "coupon_code": "SAVE2000", "discount": 2000, "delivery_fee": 0, "total": 64498 },
+    "pricing": {
+      "subtotal": 66498,
+      "coupon_code": "SAVE2000",
+      "discount": 2000,
+      "delivery_fee": 0,
+      "total": 64498
+    },
     "payments": [
-      { "id": "PAY-1001-W", "method": "wallet", "amount": 5000, "status": "captured" },
-      { "id": "PAY-1001-C", "method": "card", "card_ref": "CARD-A1", "amount": 59498, "status": "captured" }
+      {
+        "id": "PAY-1001-W",
+        "method": "wallet",
+        "amount": 5000,
+        "status": "captured"
+      },
+      {
+        "id": "PAY-1001-C",
+        "method": "card",
+        "card_ref": "CARD-A1",
+        "amount": 59498,
+        "status": "captured"
+      }
     ],
     "shipment_id": "SHP-1001"
   },
   {
-    "id": "ORD-1002", "customer_id": "CUST-001", "placed_at": "2026-11-02T09:05:00+05:30", "status": "in_transit",
+    "id": "ORD-1002",
+    "customer_id": "CUST-001",
+    "placed_at": "2026-11-02T09:05:00+05:30",
+    "status": "in_transit",
     "address_id": "ADDR-001-H",
-    "items": [ { "product_id": "P105", "title": "Nothing Phone (3a) (8GB/128GB)", "color": "White", "qty": 1, "unit_price": 24999 } ],
-    "pricing": { "subtotal": 24999, "coupon_code": null, "discount": 0, "delivery_fee": 0, "total": 24999 },
-    "payments": [ { "id": "PAY-1002-U", "method": "upi", "vpa": "aarav@okexample", "amount": 24999, "status": "captured" } ],
-    "gift": { "is_gift": true, "message": "Happy birthday, Anaya!" },
+    "items": [
+      {
+        "product_id": "P105",
+        "title": "Nothing Phone (3a) (8GB/128GB)",
+        "color": "White",
+        "qty": 1,
+        "unit_price": 24999
+      }
+    ],
+    "pricing": {
+      "subtotal": 24999,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 24999
+    },
+    "payments": [
+      {
+        "id": "PAY-1002-U",
+        "method": "upi",
+        "vpa": "aarav@okexample",
+        "amount": 24999,
+        "status": "captured"
+      }
+    ],
+    "gift": {
+      "is_gift": true,
+      "message": "Happy birthday, Anaya!"
+    },
     "shipment_id": "SHP-1002"
   },
   {
-    "id": "ORD-1003", "customer_id": "CUST-001", "placed_at": "2026-10-12T22:10:00+05:30", "status": "returned", "delivered_at": "2026-10-15T11:45:00+05:30",
+    "id": "ORD-1003",
+    "customer_id": "CUST-001",
+    "placed_at": "2026-10-12T22:10:00+05:30",
+    "status": "returned",
+    "delivered_at": "2026-10-15T11:45:00+05:30",
     "address_id": "ADDR-001-H",
-    "items": [ { "product_id": "A202", "title": "OnePlus Nord Buds 3 Pro (TWS Earbuds)", "qty": 1, "unit_price": 2999 } ],
-    "pricing": { "subtotal": 2999, "coupon_code": null, "discount": 0, "delivery_fee": 0, "total": 2999 },
-    "payments": [ { "id": "PAY-1003-C", "method": "card", "card_ref": "CARD-A1", "amount": 2999, "status": "captured" } ],
-    "shipment_id": "SHP-1003", "return_id": "RET-1003", "refund_id": "RFD-1003"
+    "items": [
+      {
+        "product_id": "A202",
+        "title": "OnePlus Nord Buds 3 Pro (TWS Earbuds)",
+        "qty": 1,
+        "unit_price": 2999
+      }
+    ],
+    "pricing": {
+      "subtotal": 2999,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 2999
+    },
+    "payments": [
+      {
+        "id": "PAY-1003-C",
+        "method": "card",
+        "card_ref": "CARD-A1",
+        "amount": 2999,
+        "status": "captured"
+      }
+    ],
+    "shipment_id": "SHP-1003",
+    "return_id": "RET-1003",
+    "refund_id": "RFD-1003"
   },
   {
-    "id": "ORD-1004", "customer_id": "CUST-001", "placed_at": "2026-11-04T10:15:00+05:30", "status": "confirmed",
+    "id": "ORD-1004",
+    "customer_id": "CUST-001",
+    "placed_at": "2026-11-04T10:15:00+05:30",
+    "status": "confirmed",
     "address_id": "ADDR-001-O",
-    "items": [ { "product_id": "A203", "title": "VoltEdge 65W GaN USB-C Fast Charger", "qty": 1, "unit_price": 1799 } ],
-    "pricing": { "subtotal": 1799, "coupon_code": null, "discount": 0, "delivery_fee": 0, "total": 1799 },
-    "payments": [ { "id": "PAY-1004-COD", "method": "cod", "amount": 1799, "status": "pending_on_delivery" } ],
+    "items": [
+      {
+        "product_id": "A203",
+        "title": "VoltEdge 65W GaN USB-C Fast Charger",
+        "qty": 1,
+        "unit_price": 1799
+      }
+    ],
+    "pricing": {
+      "subtotal": 1799,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 1799
+    },
+    "payments": [
+      {
+        "id": "PAY-1004-COD",
+        "method": "cod",
+        "amount": 1799,
+        "status": "pending_on_delivery"
+      }
+    ],
     "shipment_id": null
   },
-
   {
-    "id": "ORD-2001", "customer_id": "CUST-002", "placed_at": "2026-10-25T13:30:00+05:30", "status": "in_transit_delayed",
+    "id": "ORD-2001",
+    "customer_id": "CUST-002",
+    "placed_at": "2026-10-25T13:30:00+05:30",
+    "status": "in_transit_delayed",
     "address_id": "ADDR-002-H",
-    "items": [ { "product_id": "P107", "title": "Samsung Galaxy A35 5G (8GB/128GB)", "color": "Awesome Lilac", "qty": 1, "unit_price": 27999 } ],
-    "pricing": { "subtotal": 27999, "coupon_code": null, "discount": 0, "delivery_fee": 0, "total": 27999 },
+    "items": [
+      {
+        "product_id": "P107",
+        "title": "Samsung Galaxy A35 5G (8GB/128GB)",
+        "color": "Awesome Lilac",
+        "qty": 1,
+        "unit_price": 27999
+      }
+    ],
+    "pricing": {
+      "subtotal": 27999,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 27999
+    },
     "payments": [
-      { "id": "PAY-2001-W", "method": "wallet", "amount": 300, "status": "captured" },
-      { "id": "PAY-2001-C", "method": "card", "card_ref": "CARD-P1", "amount": 27699, "status": "captured" }
+      {
+        "id": "PAY-2001-W",
+        "method": "wallet",
+        "amount": 300,
+        "status": "captured"
+      },
+      {
+        "id": "PAY-2001-C",
+        "method": "card",
+        "card_ref": "CARD-P1",
+        "amount": 27699,
+        "status": "captured"
+      }
     ],
     "shipment_id": "SHP-2001"
   },
   {
-    "id": "ORD-2002", "customer_id": "CUST-002", "placed_at": "2026-10-30T18:00:00+05:30", "status": "cancelled", "cancelled_at": "2026-10-31T09:40:00+05:30", "cancel_reason": "Ordered by mistake (customer)",
+    "id": "ORD-2002",
+    "customer_id": "CUST-002",
+    "placed_at": "2026-10-30T18:00:00+05:30",
+    "status": "cancelled",
+    "cancelled_at": "2026-10-31T09:40:00+05:30",
+    "cancel_reason": "Ordered by mistake (customer)",
     "address_id": "ADDR-002-H",
-    "items": [ { "product_id": "P108", "title": "Realme Narzo 70 5G (6GB/128GB)", "color": "Ice Blue", "qty": 1, "unit_price": 13499 } ],
-    "pricing": { "subtotal": 13499, "coupon_code": null, "discount": 0, "delivery_fee": 0, "total": 13499 },
-    "payments": [ { "id": "PAY-2002-U", "method": "upi", "vpa": "priya.n@okexample", "amount": 13499, "status": "captured" } ],
-    "shipment_id": null, "refund_id": "RFD-2002"
+    "items": [
+      {
+        "product_id": "P108",
+        "title": "Realme Narzo 70 5G (6GB/128GB)",
+        "color": "Ice Blue",
+        "qty": 1,
+        "unit_price": 13499
+      }
+    ],
+    "pricing": {
+      "subtotal": 13499,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 13499
+    },
+    "payments": [
+      {
+        "id": "PAY-2002-U",
+        "method": "upi",
+        "vpa": "priya.n@okexample",
+        "amount": 13499,
+        "status": "captured"
+      }
+    ],
+    "shipment_id": null,
+    "refund_id": "RFD-2002"
   },
   {
-    "id": "ORD-2003", "customer_id": "CUST-002", "placed_at": "2026-11-02T20:12:00+05:30", "status": "payment_failed",
+    "id": "ORD-2003",
+    "customer_id": "CUST-002",
+    "placed_at": "2026-11-02T20:12:00+05:30",
+    "status": "payment_failed",
     "address_id": "ADDR-002-H",
-    "items": [ { "product_id": "A203", "title": "VoltEdge 65W GaN USB-C Fast Charger", "qty": 1, "unit_price": 1799 } ],
-    "pricing": { "subtotal": 1799, "coupon_code": null, "discount": 0, "delivery_fee": 0, "total": 1799 },
+    "items": [
+      {
+        "product_id": "A203",
+        "title": "VoltEdge 65W GaN USB-C Fast Charger",
+        "qty": 1,
+        "unit_price": 1799
+      }
+    ],
+    "pricing": {
+      "subtotal": 1799,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 1799
+    },
     "payments": [
-      { "id": "PAY-2003-U", "method": "upi", "vpa": "priya.n@okexample", "amount": 1799, "status": "failed",
-        "failure_reason": "Gateway timeout after bank debit", "bank_debited": true, "bank_rrn": "630612345678",
-        "auto_reversal": { "status": "pending", "initiated_at": "2026-11-02T20:20:00+05:30", "expected_by": "2026-11-09" } }
+      {
+        "id": "PAY-2003-U",
+        "method": "upi",
+        "vpa": "priya.n@okexample",
+        "amount": 1799,
+        "status": "failed",
+        "failure_reason": "Gateway timeout after bank debit",
+        "bank_debited": true,
+        "bank_rrn": "630612345678",
+        "auto_reversal": {
+          "status": "pending",
+          "initiated_at": "2026-11-02T20:20:00+05:30",
+          "expected_by": "2026-11-09"
+        }
+      }
     ],
     "shipment_id": null
   },
-
   {
-    "id": "ORD-3001", "customer_id": "CUST-003", "placed_at": "2026-09-05T15:00:00+05:30", "status": "delivered", "delivered_at": "2026-09-08T12:30:00+05:30",
+    "id": "ORD-3001",
+    "customer_id": "CUST-003",
+    "placed_at": "2026-09-05T15:00:00+05:30",
+    "status": "delivered",
+    "delivered_at": "2026-09-08T12:30:00+05:30",
     "address_id": "ADDR-003-H",
-    "items": [ { "product_id": "P115", "title": "Apple iPhone 15 (128GB)", "color": "Blue", "qty": 1, "unit_price": 59900 } ],
-    "pricing": { "subtotal": 59900, "coupon_code": "NEWPHONE5", "discount": 1500, "delivery_fee": 0, "total": 58400 },
-    "payments": [ { "id": "PAY-3001-C", "method": "card", "card_ref": "CARD-R2", "amount": 58400, "status": "captured" } ],
+    "items": [
+      {
+        "product_id": "P115",
+        "title": "Apple iPhone 15 (128GB)",
+        "color": "Blue",
+        "qty": 1,
+        "unit_price": 59900
+      }
+    ],
+    "pricing": {
+      "subtotal": 59900,
+      "coupon_code": "NEWPHONE5",
+      "discount": 1500,
+      "delivery_fee": 0,
+      "total": 58400
+    },
+    "payments": [
+      {
+        "id": "PAY-3001-C",
+        "method": "card",
+        "card_ref": "CARD-R2",
+        "amount": 58400,
+        "status": "captured"
+      }
+    ],
     "shipment_id": "SHP-3001"
   },
   {
-    "id": "ORD-3002", "customer_id": "CUST-003", "placed_at": "2026-10-27T11:25:00+05:30", "status": "replacement_in_progress", "delivered_at": "2026-10-29T17:10:00+05:30",
+    "id": "ORD-3002",
+    "customer_id": "CUST-003",
+    "placed_at": "2026-10-27T11:25:00+05:30",
+    "status": "replacement_in_progress",
+    "delivered_at": "2026-10-29T17:10:00+05:30",
     "address_id": "ADDR-003-O",
     "items": [
-      { "product_id": "P103", "title": "Google Pixel 9 (12GB/256GB)", "color": "Obsidian", "qty": 1, "unit_price": 64999 },
-      { "product_id": "A204", "title": "Tempered Glass Screen Guard for Pixel 9 (Pack of 2)", "qty": 1, "unit_price": 499 }
+      {
+        "product_id": "P103",
+        "title": "Google Pixel 9 (12GB/256GB)",
+        "color": "Obsidian",
+        "qty": 1,
+        "unit_price": 64999
+      },
+      {
+        "product_id": "A204",
+        "title": "Tempered Glass Screen Guard for Pixel 9 (Pack of 2)",
+        "qty": 1,
+        "unit_price": 499
+      }
     ],
-    "pricing": { "subtotal": 65498, "coupon_code": "SAVE2000", "discount": 2000, "delivery_fee": 0, "total": 63498 },
-    "payments": [ { "id": "PAY-3002-C", "method": "card", "card_ref": "CARD-R2", "amount": 63498, "status": "captured" } ],
-    "shipment_id": "SHP-3002", "return_id": "RET-3002"
+    "pricing": {
+      "subtotal": 65498,
+      "coupon_code": "SAVE2000",
+      "discount": 2000,
+      "delivery_fee": 0,
+      "total": 63498
+    },
+    "payments": [
+      {
+        "id": "PAY-3002-C",
+        "method": "card",
+        "card_ref": "CARD-R2",
+        "amount": 63498,
+        "status": "captured"
+      }
+    ],
+    "shipment_id": "SHP-3002",
+    "return_id": "RET-3002"
   },
   {
-    "id": "ORD-3003", "customer_id": "CUST-003", "placed_at": "2026-10-05T20:00:00+05:30", "status": "cancelled", "cancelled_at": "2026-10-06T08:15:00+05:30", "cancel_reason": "Found a better price (customer)",
+    "id": "ORD-3003",
+    "customer_id": "CUST-003",
+    "placed_at": "2026-10-05T20:00:00+05:30",
+    "status": "cancelled",
+    "cancelled_at": "2026-10-06T08:15:00+05:30",
+    "cancel_reason": "Found a better price (customer)",
     "address_id": "ADDR-003-H",
     "items": [
-      { "product_id": "A203", "title": "VoltEdge 65W GaN USB-C Fast Charger", "qty": 1, "unit_price": 1799 },
-      { "product_id": "A205", "title": "Spigen Ultra Hybrid Case for iPhone 16", "qty": 1, "unit_price": 1299 }
+      {
+        "product_id": "A203",
+        "title": "VoltEdge 65W GaN USB-C Fast Charger",
+        "qty": 1,
+        "unit_price": 1799
+      },
+      {
+        "product_id": "A205",
+        "title": "Spigen Ultra Hybrid Case for iPhone 16",
+        "qty": 1,
+        "unit_price": 1299
+      }
     ],
-    "pricing": { "subtotal": 3098, "coupon_code": "ACC10", "discount": 310, "delivery_fee": 0, "total": 2788 },
-    "payments": [ { "id": "PAY-3003-C", "method": "card", "card_ref": "CARD-R1", "amount": 2788, "status": "captured" } ],
-    "shipment_id": null, "refund_id": "RFD-3003"
+    "pricing": {
+      "subtotal": 3098,
+      "coupon_code": "ACC10",
+      "discount": 310,
+      "delivery_fee": 0,
+      "total": 2788
+    },
+    "payments": [
+      {
+        "id": "PAY-3003-C",
+        "method": "card",
+        "card_ref": "CARD-R1",
+        "amount": 2788,
+        "status": "captured"
+      }
+    ],
+    "shipment_id": null,
+    "refund_id": "RFD-3003"
+  },
+  {
+    "id": "ORD-4001",
+    "customer_id": "CUST-004",
+    "placed_at": "2026-10-27T21:10:00+05:30",
+    "status": "delivered",
+    "address_id": "ADDR-004-H",
+    "items": [
+      {
+        "product_id": "L401",
+        "title": "Apple MacBook Air 13\" M3 (8GB/256GB)",
+        "qty": 1,
+        "unit_price": 114900
+      }
+    ],
+    "pricing": {
+      "subtotal": 114900,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 114900
+    },
+    "payments": [
+      {
+        "id": "PAY-4001-C",
+        "method": "card",
+        "card_ref": "CARD-M1",
+        "amount": 114900,
+        "status": "captured",
+        "emi": {
+          "months": 6,
+          "no_cost": true,
+          "monthly": 19150
+        }
+      }
+    ],
+    "shipment_id": "SHP-4001",
+    "delivered_at": "2026-10-30T13:05:00+05:30"
+  },
+  {
+    "id": "ORD-4002",
+    "customer_id": "CUST-004",
+    "placed_at": "2026-11-03T08:40:00+05:30",
+    "status": "in_transit",
+    "address_id": "ADDR-004-H",
+    "items": [
+      {
+        "product_id": "W501",
+        "title": "Apple Watch SE (2nd gen, GPS, 40mm)",
+        "qty": 1,
+        "unit_price": 29900
+      }
+    ],
+    "pricing": {
+      "subtotal": 29900,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 29900
+    },
+    "payments": [
+      {
+        "id": "PAY-4002-W",
+        "method": "wallet",
+        "amount": 5000,
+        "status": "captured"
+      },
+      {
+        "id": "PAY-4002-U",
+        "method": "upi",
+        "vpa": "meera.iyer@okexample",
+        "amount": 24900,
+        "status": "captured"
+      }
+    ],
+    "shipment_id": "SHP-4002"
+  },
+  {
+    "id": "ORD-4003",
+    "customer_id": "CUST-004",
+    "placed_at": "2026-10-26T18:30:00+05:30",
+    "status": "return_in_progress",
+    "address_id": "ADDR-004-H",
+    "items": [
+      {
+        "product_id": "A207",
+        "title": "Apple AirPods Pro (2nd gen, USB-C)",
+        "qty": 1,
+        "unit_price": 24900
+      }
+    ],
+    "pricing": {
+      "subtotal": 24900,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 24900
+    },
+    "payments": [
+      {
+        "id": "PAY-4003-C",
+        "method": "card",
+        "card_ref": "CARD-M1",
+        "amount": 24900,
+        "status": "captured"
+      }
+    ],
+    "shipment_id": "SHP-4003",
+    "delivered_at": "2026-10-28T11:20:00+05:30",
+    "return_id": "RET-4003"
+  },
+  {
+    "id": "ORD-5001",
+    "customer_id": "CUST-005",
+    "placed_at": "2026-11-04T09:15:00+05:30",
+    "status": "packed",
+    "address_id": "ADDR-005-H",
+    "items": [
+      {
+        "product_id": "P125",
+        "title": "Realme 13 Pro 5G (8GB/256GB)",
+        "qty": 1,
+        "unit_price": 26999,
+        "color": "Emerald Green"
+      }
+    ],
+    "pricing": {
+      "subtotal": 26999,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 26999
+    },
+    "payments": [
+      {
+        "id": "PAY-5001-COD",
+        "method": "cod",
+        "amount": 26999,
+        "status": "pending_on_delivery"
+      }
+    ],
+    "shipment_id": null
+  },
+  {
+    "id": "ORD-5002",
+    "customer_id": "CUST-005",
+    "placed_at": "2026-10-17T19:00:00+05:30",
+    "status": "delivered",
+    "address_id": "ADDR-005-H",
+    "items": [
+      {
+        "product_id": "A208",
+        "title": "boAt Airdopes 141",
+        "qty": 1,
+        "unit_price": 1299
+      }
+    ],
+    "pricing": {
+      "subtotal": 1299,
+      "coupon_code": null,
+      "discount": 0,
+      "delivery_fee": 0,
+      "total": 1299
+    },
+    "payments": [
+      {
+        "id": "PAY-5002-U",
+        "method": "upi",
+        "vpa": "arjunk@okexample",
+        "amount": 1299,
+        "status": "captured"
+      }
+    ],
+    "shipment_id": "SHP-5002",
+    "delivered_at": "2026-10-20T16:45:00+05:30"
   }
 ]

@@ -7,6 +7,8 @@ Effective: 1 July 2026. Applies to all orders on enzovo (a fictional store used 
 | Category | Window (from delivery date) | What you can get |
 |---|---|---|
 | Mobiles | 7 days | Replacement only, for a defective, damaged or wrong item |
+| Tablets and laptops | 7 days | Replacement only, for a defective, damaged or wrong item |
+| Wearables (smartwatches, fitness bands) | 10 days | Refund or replacement, if defective or unused in original packaging |
 | Audio (earbuds, headphones, speakers) | 10 days | Refund or replacement. In-ear products only if defective (hygiene) |
 | Accessories (cases, chargers, cables) | 10 days | Refund or replacement, for any reason, if unused and in original packaging |
 | Screen guards / tempered glass | 10 days | Only if unopened. Not returnable once applied |

@@ -5,7 +5,7 @@ import type { AgentName } from './tools.js';
 
 export const ROUTER_PROMPT = `You route customer messages for "enzovo", an Indian online electronics store.
 Pick every agent needed:
-- product: browsing, what we sell, how many products, trending, ratings, prices, specs, compare, stock, delivery to a pincode, accessories
+- product: browsing (phones, tablets, laptops, smartwatches, audio, accessories), what we sell, how many products, trending, ratings, prices, specs, compare, stock, delivery to a pincode, accessories
 - order: where is my order, tracking, delays, order history, BUY/place an order, cancel an order
 - payments: wallet balance or transactions, refunds, returns, replacements, failed payments, cashback
 - policy: general rules (return window, COD, EMI, delivery charges, refund timelines)

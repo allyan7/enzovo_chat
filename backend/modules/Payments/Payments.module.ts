@@ -90,7 +90,8 @@ export function getReturnStatus({ db, customerId }: Ctx, orderId?: string) {
 	return { returns: rows.map((r) => j(r.data)) };
 }
 
-const WINDOW_DAYS: Record<string, number> = { mobiles: 7, audio: 10, accessories: 10 };
+const WINDOW_DAYS: Record<string, number> = { mobiles: 7, tablets: 7, laptops: 7, wearables: 10, audio: 10, accessories: 10 };
+const REPLACEMENT_ONLY = ['mobiles', 'tablets', 'laptops'];
 
 /** Applies returns-and-refunds §1: window from the day after delivery. */
 export function checkReturnEligibility({ db, customerId }: Ctx, orderId: string) {
@@ -108,7 +109,7 @@ export function checkReturnEligibility({ db, customerId }: Ctx, orderId: string)
 			product_id: i.product_id, title: i.title, category: p.category,
 			delivered_on: dateOnly(o.delivered_at!), window_days: days, last_day: last,
 			eligible: config.today <= last,
-			allowed: p.category === 'mobiles' ? 'replacement only, if defective/damaged/wrong item' : 'refund or replacement',
+			allowed: REPLACEMENT_ONLY.includes(p.category) ? 'replacement only, if defective/damaged/wrong item' : 'refund or replacement',
 		};
 	});
 	return { order_id: o.id, today: config.today, items, policy_ref: 'returns-and-refunds §1, §2' };

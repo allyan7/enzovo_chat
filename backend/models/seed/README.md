@@ -61,3 +61,24 @@ Trending = sort by `units_sold_7d` (or a blend with `views_7d`). Top 3 phones: R
 ## Why local mock data and not a public API
 
 Public fake-store APIs (DummyJSON, FakeStoreAPI, Platzi, Beeceptor) are fine for a product catalogue, but they have no wallet, shipments, returns or refunds, and their write calls don't persist. Order placement and wallet debits need a real transactional store, so this data is meant to be loaded into SQLite and served by your own local REST API / MCP server.
+
+### CUST-004 Meera Iyer — Mumbai, Gold, wallet ₹15,000, prefers card
+| Ask | Data behind it | Expected answer |
+|---|---|---|
+| "When will my Apple Watch arrive?" | ORD-4002, SHP-4002 out for delivery | Arriving today; OTP needed (order over ₹10,000) |
+| "Status of my AirPods return?" | RET-4003 pickup 5 Nov, 14:00–18:00 | Pickup tomorrow; ₹24,900 to Visa 2290 after QC, 5–7 business days |
+| "How am I paying for the MacBook?" | ORD-4001 card, 6-month no-cost EMI | ₹19,150/month for 6 months |
+| "Which tablets under ₹40,000?" | T301, T302, T303 | iPad 10th gen, Galaxy Tab S9 FE, Xiaomi Pad 6 |
+
+### CUST-005 Arjun Kulkarni — Pune, Silver, min-KYC, ₹200 promo credit, prefers COD
+| Ask | Data behind it | Expected answer |
+|---|---|---|
+| "Cancel my Realme order" | ORD-5001 packed, COD | Free cancel before dispatch; nothing to refund (COD) |
+| "Can I pay with my wallet?" | ₹200 promo only, capped at 10% | Promo covers at most 10% of an order, expires 30 Nov |
+| "Is COD available?" | Pincode 411038 | Yes, for orders up to ₹50,000 |
+
+## Catalogue (46 products)
+Mobiles 25 · tablets 3 · laptops 3 · wearables 4 · audio 4 · accessories 7. Out of stock: iQOO Z9 (P109), HP Pavilion x360 (L403).
+
+## Evals
+`npm run eval` turns these scenarios into automatic checks: `backend/evals/scenarios.ts`.

@@ -8,7 +8,7 @@ import { config } from '../../configs/app.config.js';
 
 export interface SearchInput {
 	query?: string;
-	category?: 'mobiles' | 'accessories' | 'audio';
+	category?: 'mobiles' | 'tablets' | 'laptops' | 'wearables' | 'audio' | 'accessories';
 	brand?: string;
 	min_rating?: number;
 	min_price?: number;

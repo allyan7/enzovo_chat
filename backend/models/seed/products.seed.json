@@ -1,23 +1,1320 @@
 [
-  { "id": "P101", "title": "Samsung Galaxy S24 (8GB/128GB)", "brand": "Samsung", "category": "mobiles", "price": 64999, "mrp": 79999, "rating": 4.5, "rating_count": 12840, "units_sold_7d": 920, "views_7d": 48200, "stock": 45, "is_5g": true, "ram_gb": 8, "storage_gb": 128, "colors": ["Onyx Black", "Marble Grey", "Cobalt Violet"], "highlights": ["6.2\" Dynamic AMOLED 120Hz", "50MP triple camera", "4000 mAh", "7 years OS updates"], "in_box": ["Phone", "USB-C cable"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-01-17" },
-  { "id": "P102", "title": "Apple iPhone 16 (128GB)", "brand": "Apple", "category": "mobiles", "price": 69900, "mrp": 79900, "rating": 4.6, "rating_count": 21450, "units_sold_7d": 1340, "views_7d": 91500, "stock": 60, "is_5g": true, "ram_gb": 8, "storage_gb": 128, "colors": ["Black", "White", "Teal", "Pink"], "highlights": ["6.1\" Super Retina XDR", "48MP Fusion camera", "Camera Control button", "A18 chip"], "in_box": ["Phone", "USB-C cable"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-09-20" },
-  { "id": "P103", "title": "Google Pixel 9 (12GB/256GB)", "brand": "Google", "category": "mobiles", "price": 64999, "mrp": 79999, "rating": 4.4, "rating_count": 5320, "units_sold_7d": 410, "views_7d": 26800, "stock": 18, "is_5g": true, "ram_gb": 12, "storage_gb": 256, "colors": ["Obsidian", "Porcelain", "Wintergreen"], "highlights": ["6.3\" Actua display", "50MP + 48MP ultrawide", "Tensor G4", "7 years OS updates"], "in_box": ["Phone", "USB-C cable", "Quick Switch adapter"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-08-22" },
-  { "id": "P104", "title": "OnePlus 13R (12GB/256GB)", "brand": "OnePlus", "category": "mobiles", "price": 42999, "mrp": 44999, "rating": 4.4, "rating_count": 9870, "units_sold_7d": 1110, "views_7d": 52300, "stock": 70, "is_5g": true, "ram_gb": 12, "storage_gb": 256, "colors": ["Astral Trail", "Nebula Noir"], "highlights": ["6.78\" 120Hz AMOLED", "Snapdragon 8 Gen 3", "6000 mAh, 80W charging"], "in_box": ["Phone", "80W charger", "USB-C cable", "Case"], "warranty": "1 year manufacturer warranty", "launch_date": "2025-01-07" },
-  { "id": "P105", "title": "Nothing Phone (3a) (8GB/128GB)", "brand": "Nothing", "category": "mobiles", "price": 24999, "mrp": 27999, "rating": 4.3, "rating_count": 15600, "units_sold_7d": 1580, "views_7d": 74100, "stock": 120, "is_5g": true, "ram_gb": 8, "storage_gb": 128, "colors": ["Black", "White", "Blue"], "highlights": ["Glyph interface", "50MP periscope telephoto", "5000 mAh"], "in_box": ["Phone", "USB-C cable"], "warranty": "1 year manufacturer warranty", "launch_date": "2025-03-04" },
-  { "id": "P106", "title": "Redmi Note 14 Pro 5G (8GB/256GB)", "brand": "Xiaomi", "category": "mobiles", "price": 23999, "mrp": 26999, "rating": 4.1, "rating_count": 28900, "units_sold_7d": 1720, "views_7d": 80400, "stock": 200, "is_5g": true, "ram_gb": 8, "storage_gb": 256, "colors": ["Titan Black", "Spectre Blue", "Phantom Purple"], "highlights": ["200MP main camera", "IP68", "5500 mAh, 45W"], "in_box": ["Phone", "45W charger", "USB-C cable", "Case"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-12-09" },
-  { "id": "P107", "title": "Samsung Galaxy A35 5G (8GB/128GB)", "brand": "Samsung", "category": "mobiles", "price": 27999, "mrp": 33999, "rating": 4.2, "rating_count": 18750, "units_sold_7d": 640, "views_7d": 30200, "stock": 85, "is_5g": true, "ram_gb": 8, "storage_gb": 128, "colors": ["Awesome Navy", "Awesome Lilac", "Awesome Iceblue"], "highlights": ["Super AMOLED 120Hz", "50MP OIS camera", "IP67", "5000 mAh"], "in_box": ["Phone", "USB-C cable"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-03-11" },
-  { "id": "P108", "title": "Realme Narzo 70 5G (6GB/128GB)", "brand": "Realme", "category": "mobiles", "price": 13499, "mrp": 15999, "rating": 3.9, "rating_count": 22100, "units_sold_7d": 980, "views_7d": 41000, "stock": 150, "is_5g": true, "ram_gb": 6, "storage_gb": 128, "colors": ["Ice Blue", "Forest Green"], "highlights": ["Dimensity 7050", "120Hz AMOLED", "5000 mAh, 45W"], "in_box": ["Phone", "45W charger", "USB-C cable"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-03-19" },
-  { "id": "P109", "title": "iQOO Z9 5G (8GB/128GB)", "brand": "iQOO", "category": "mobiles", "price": 18999, "mrp": 22999, "rating": 4.3, "rating_count": 11200, "units_sold_7d": 760, "views_7d": 35900, "stock": 0, "is_5g": true, "ram_gb": 8, "storage_gb": 128, "colors": ["Brushed Green", "Graphene Blue"], "highlights": ["Dimensity 7200", "50MP Sony IMX882 OIS", "5000 mAh"], "in_box": ["Phone", "44W charger", "USB-C cable", "Case"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-03-12" },
-  { "id": "P110", "title": "Motorola Edge 50 Fusion (8GB/256GB)", "brand": "Motorola", "category": "mobiles", "price": 22999, "mrp": 25999, "rating": 4.2, "rating_count": 9400, "units_sold_7d": 530, "views_7d": 22700, "stock": 40, "is_5g": true, "ram_gb": 8, "storage_gb": 256, "colors": ["Marshmallow Blue", "Hot Pink", "Forest Blue"], "highlights": ["6.7\" curved pOLED 144Hz", "IP68", "68W TurboPower"], "in_box": ["Phone", "68W charger", "USB-C cable", "Case"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-05-16" },
-  { "id": "P111", "title": "Vivo T3 5G (8GB/128GB)", "brand": "Vivo", "category": "mobiles", "price": 19999, "mrp": 22999, "rating": 4.0, "rating_count": 7600, "units_sold_7d": 350, "views_7d": 15800, "stock": 60, "is_5g": true, "ram_gb": 8, "storage_gb": 128, "colors": ["Cosmic Blue", "Crystal Flake"], "highlights": ["Dimensity 7200", "50MP Sony OIS", "5000 mAh, 44W"], "in_box": ["Phone", "44W charger", "USB-C cable", "Case"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-03-21" },
-  { "id": "P112", "title": "Poco X6 Pro 5G (8GB/256GB)", "brand": "Poco", "category": "mobiles", "price": 22999, "mrp": 26999, "rating": 4.4, "rating_count": 13300, "units_sold_7d": 690, "views_7d": 33600, "stock": 25, "is_5g": true, "ram_gb": 8, "storage_gb": 256, "colors": ["Racing Grey", "Poco Yellow"], "highlights": ["Dimensity 8300 Ultra", "1.5K 120Hz AMOLED", "5000 mAh, 67W"], "in_box": ["Phone", "67W charger", "USB-C cable", "Case"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-01-11" },
-  { "id": "P113", "title": "Samsung Galaxy M15 5G (4GB/128GB)", "brand": "Samsung", "category": "mobiles", "price": 11999, "mrp": 14999, "rating": 3.8, "rating_count": 31000, "units_sold_7d": 1210, "views_7d": 39500, "stock": 300, "is_5g": true, "ram_gb": 4, "storage_gb": 128, "colors": ["Blue Topaz", "Celestial Blue", "Stone Grey"], "highlights": ["6000 mAh", "Super AMOLED 90Hz", "4 years OS updates"], "in_box": ["Phone", "USB-C cable"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-04-08" },
-  { "id": "P114", "title": "Lava Agni 3 5G (8GB/128GB)", "brand": "Lava", "category": "mobiles", "price": 20999, "mrp": 22999, "rating": 3.7, "rating_count": 2100, "units_sold_7d": 140, "views_7d": 9200, "stock": 30, "is_5g": true, "ram_gb": 8, "storage_gb": 128, "colors": ["Heather Glass", "Pristine Glass"], "highlights": ["Rear secondary display", "Action key", "5000 mAh, 66W"], "in_box": ["Phone", "66W charger", "USB-C cable"], "warranty": "1 year manufacturer warranty", "launch_date": "2024-10-04" },
-  { "id": "P115", "title": "Apple iPhone 15 (128GB)", "brand": "Apple", "category": "mobiles", "price": 59900, "mrp": 69900, "rating": 4.6, "rating_count": 40200, "units_sold_7d": 870, "views_7d": 57300, "stock": 35, "is_5g": true, "ram_gb": 6, "storage_gb": 128, "colors": ["Black", "Blue", "Green", "Yellow", "Pink"], "highlights": ["Dynamic Island", "48MP main camera", "USB-C", "A16 Bionic"], "in_box": ["Phone", "USB-C cable"], "warranty": "1 year manufacturer warranty", "launch_date": "2023-09-22" },
-
-  { "id": "A201", "title": "Samsung Galaxy S24 Silicone Case", "brand": "Samsung", "category": "accessories", "price": 1499, "mrp": 2999, "rating": 4.2, "rating_count": 3100, "units_sold_7d": 210, "views_7d": 5100, "stock": 140, "compatible_with": ["P101"], "warranty": "6 months", "launch_date": "2024-01-17" },
-  { "id": "A202", "title": "OnePlus Nord Buds 3 Pro (TWS Earbuds)", "brand": "OnePlus", "category": "audio", "price": 2999, "mrp": 3999, "rating": 4.1, "rating_count": 26400, "units_sold_7d": 1450, "views_7d": 38800, "stock": 400, "compatible_with": [], "warranty": "1 year manufacturer warranty", "launch_date": "2024-09-17" },
-  { "id": "A203", "title": "VoltEdge 65W GaN USB-C Fast Charger", "brand": "VoltEdge", "category": "accessories", "price": 1799, "mrp": 2999, "rating": 4.3, "rating_count": 8700, "units_sold_7d": 620, "views_7d": 12400, "stock": 260, "compatible_with": ["P101", "P102", "P103", "P104", "P105", "P106", "P107", "P115"], "warranty": "1 year", "launch_date": "2025-02-01" },
-  { "id": "A204", "title": "Tempered Glass Screen Guard for Pixel 9 (Pack of 2)", "brand": "ShieldPro", "category": "accessories", "price": 499, "mrp": 999, "rating": 3.9, "rating_count": 1800, "units_sold_7d": 95, "views_7d": 2300, "stock": 500, "compatible_with": ["P103"], "warranty": "None", "launch_date": "2024-08-30" },
-  { "id": "A205", "title": "Spigen Ultra Hybrid Case for iPhone 16", "brand": "Spigen", "category": "accessories", "price": 1299, "mrp": 1999, "rating": 4.5, "rating_count": 6900, "units_sold_7d": 330, "views_7d": 7600, "stock": 180, "compatible_with": ["P102"], "warranty": "6 months", "launch_date": "2024-09-20" }
+  {
+    "id": "P101",
+    "title": "Samsung Galaxy S24 (8GB/128GB)",
+    "brand": "Samsung",
+    "category": "mobiles",
+    "price": 64999,
+    "mrp": 79999,
+    "rating": 4.5,
+    "rating_count": 12840,
+    "units_sold_7d": 920,
+    "views_7d": 48200,
+    "stock": 45,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Onyx Black",
+      "Marble Grey",
+      "Cobalt Violet"
+    ],
+    "highlights": [
+      "6.2\" Dynamic AMOLED 120Hz",
+      "50MP triple camera",
+      "4000 mAh",
+      "7 years OS updates"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-01-17"
+  },
+  {
+    "id": "P102",
+    "title": "Apple iPhone 16 (128GB)",
+    "brand": "Apple",
+    "category": "mobiles",
+    "price": 69900,
+    "mrp": 79900,
+    "rating": 4.6,
+    "rating_count": 21450,
+    "units_sold_7d": 1340,
+    "views_7d": 91500,
+    "stock": 60,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Black",
+      "White",
+      "Teal",
+      "Pink"
+    ],
+    "highlights": [
+      "6.1\" Super Retina XDR",
+      "48MP Fusion camera",
+      "Camera Control button",
+      "A18 chip"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-09-20"
+  },
+  {
+    "id": "P103",
+    "title": "Google Pixel 9 (12GB/256GB)",
+    "brand": "Google",
+    "category": "mobiles",
+    "price": 64999,
+    "mrp": 79999,
+    "rating": 4.4,
+    "rating_count": 5320,
+    "units_sold_7d": 410,
+    "views_7d": 26800,
+    "stock": 18,
+    "is_5g": true,
+    "ram_gb": 12,
+    "storage_gb": 256,
+    "colors": [
+      "Obsidian",
+      "Porcelain",
+      "Wintergreen"
+    ],
+    "highlights": [
+      "6.3\" Actua display",
+      "50MP + 48MP ultrawide",
+      "Tensor G4",
+      "7 years OS updates"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable",
+      "Quick Switch adapter"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-08-22"
+  },
+  {
+    "id": "P104",
+    "title": "OnePlus 13R (12GB/256GB)",
+    "brand": "OnePlus",
+    "category": "mobiles",
+    "price": 42999,
+    "mrp": 44999,
+    "rating": 4.4,
+    "rating_count": 9870,
+    "units_sold_7d": 1110,
+    "views_7d": 52300,
+    "stock": 70,
+    "is_5g": true,
+    "ram_gb": 12,
+    "storage_gb": 256,
+    "colors": [
+      "Astral Trail",
+      "Nebula Noir"
+    ],
+    "highlights": [
+      "6.78\" 120Hz AMOLED",
+      "Snapdragon 8 Gen 3",
+      "6000 mAh, 80W charging"
+    ],
+    "in_box": [
+      "Phone",
+      "80W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2025-01-07"
+  },
+  {
+    "id": "P105",
+    "title": "Nothing Phone (3a) (8GB/128GB)",
+    "brand": "Nothing",
+    "category": "mobiles",
+    "price": 24999,
+    "mrp": 27999,
+    "rating": 4.3,
+    "rating_count": 15600,
+    "units_sold_7d": 1580,
+    "views_7d": 74100,
+    "stock": 120,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Black",
+      "White",
+      "Blue"
+    ],
+    "highlights": [
+      "Glyph interface",
+      "50MP periscope telephoto",
+      "5000 mAh"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2025-03-04"
+  },
+  {
+    "id": "P106",
+    "title": "Redmi Note 14 Pro 5G (8GB/256GB)",
+    "brand": "Xiaomi",
+    "category": "mobiles",
+    "price": 23999,
+    "mrp": 26999,
+    "rating": 4.1,
+    "rating_count": 28900,
+    "units_sold_7d": 1720,
+    "views_7d": 80400,
+    "stock": 200,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 256,
+    "colors": [
+      "Titan Black",
+      "Spectre Blue",
+      "Phantom Purple"
+    ],
+    "highlights": [
+      "200MP main camera",
+      "IP68",
+      "5500 mAh, 45W"
+    ],
+    "in_box": [
+      "Phone",
+      "45W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-12-09"
+  },
+  {
+    "id": "P107",
+    "title": "Samsung Galaxy A35 5G (8GB/128GB)",
+    "brand": "Samsung",
+    "category": "mobiles",
+    "price": 27999,
+    "mrp": 33999,
+    "rating": 4.2,
+    "rating_count": 18750,
+    "units_sold_7d": 640,
+    "views_7d": 30200,
+    "stock": 85,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Awesome Navy",
+      "Awesome Lilac",
+      "Awesome Iceblue"
+    ],
+    "highlights": [
+      "Super AMOLED 120Hz",
+      "50MP OIS camera",
+      "IP67",
+      "5000 mAh"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-03-11"
+  },
+  {
+    "id": "P108",
+    "title": "Realme Narzo 70 5G (6GB/128GB)",
+    "brand": "Realme",
+    "category": "mobiles",
+    "price": 13499,
+    "mrp": 15999,
+    "rating": 3.9,
+    "rating_count": 22100,
+    "units_sold_7d": 980,
+    "views_7d": 41000,
+    "stock": 150,
+    "is_5g": true,
+    "ram_gb": 6,
+    "storage_gb": 128,
+    "colors": [
+      "Ice Blue",
+      "Forest Green"
+    ],
+    "highlights": [
+      "Dimensity 7050",
+      "120Hz AMOLED",
+      "5000 mAh, 45W"
+    ],
+    "in_box": [
+      "Phone",
+      "45W charger",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-03-19"
+  },
+  {
+    "id": "P109",
+    "title": "iQOO Z9 5G (8GB/128GB)",
+    "brand": "iQOO",
+    "category": "mobiles",
+    "price": 18999,
+    "mrp": 22999,
+    "rating": 4.3,
+    "rating_count": 11200,
+    "units_sold_7d": 760,
+    "views_7d": 35900,
+    "stock": 0,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Brushed Green",
+      "Graphene Blue"
+    ],
+    "highlights": [
+      "Dimensity 7200",
+      "50MP Sony IMX882 OIS",
+      "5000 mAh"
+    ],
+    "in_box": [
+      "Phone",
+      "44W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-03-12"
+  },
+  {
+    "id": "P110",
+    "title": "Motorola Edge 50 Fusion (8GB/256GB)",
+    "brand": "Motorola",
+    "category": "mobiles",
+    "price": 22999,
+    "mrp": 25999,
+    "rating": 4.2,
+    "rating_count": 9400,
+    "units_sold_7d": 530,
+    "views_7d": 22700,
+    "stock": 40,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 256,
+    "colors": [
+      "Marshmallow Blue",
+      "Hot Pink",
+      "Forest Blue"
+    ],
+    "highlights": [
+      "6.7\" curved pOLED 144Hz",
+      "IP68",
+      "68W TurboPower"
+    ],
+    "in_box": [
+      "Phone",
+      "68W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-05-16"
+  },
+  {
+    "id": "P111",
+    "title": "Vivo T3 5G (8GB/128GB)",
+    "brand": "Vivo",
+    "category": "mobiles",
+    "price": 19999,
+    "mrp": 22999,
+    "rating": 4.0,
+    "rating_count": 7600,
+    "units_sold_7d": 350,
+    "views_7d": 15800,
+    "stock": 60,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Cosmic Blue",
+      "Crystal Flake"
+    ],
+    "highlights": [
+      "Dimensity 7200",
+      "50MP Sony OIS",
+      "5000 mAh, 44W"
+    ],
+    "in_box": [
+      "Phone",
+      "44W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-03-21"
+  },
+  {
+    "id": "P112",
+    "title": "Poco X6 Pro 5G (8GB/256GB)",
+    "brand": "Poco",
+    "category": "mobiles",
+    "price": 22999,
+    "mrp": 26999,
+    "rating": 4.4,
+    "rating_count": 13300,
+    "units_sold_7d": 690,
+    "views_7d": 33600,
+    "stock": 25,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 256,
+    "colors": [
+      "Racing Grey",
+      "Poco Yellow"
+    ],
+    "highlights": [
+      "Dimensity 8300 Ultra",
+      "1.5K 120Hz AMOLED",
+      "5000 mAh, 67W"
+    ],
+    "in_box": [
+      "Phone",
+      "67W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-01-11"
+  },
+  {
+    "id": "P113",
+    "title": "Samsung Galaxy M15 5G (4GB/128GB)",
+    "brand": "Samsung",
+    "category": "mobiles",
+    "price": 11999,
+    "mrp": 14999,
+    "rating": 3.8,
+    "rating_count": 31000,
+    "units_sold_7d": 1210,
+    "views_7d": 39500,
+    "stock": 300,
+    "is_5g": true,
+    "ram_gb": 4,
+    "storage_gb": 128,
+    "colors": [
+      "Blue Topaz",
+      "Celestial Blue",
+      "Stone Grey"
+    ],
+    "highlights": [
+      "6000 mAh",
+      "Super AMOLED 90Hz",
+      "4 years OS updates"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-04-08"
+  },
+  {
+    "id": "P114",
+    "title": "Lava Agni 3 5G (8GB/128GB)",
+    "brand": "Lava",
+    "category": "mobiles",
+    "price": 20999,
+    "mrp": 22999,
+    "rating": 3.7,
+    "rating_count": 2100,
+    "units_sold_7d": 140,
+    "views_7d": 9200,
+    "stock": 30,
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Heather Glass",
+      "Pristine Glass"
+    ],
+    "highlights": [
+      "Rear secondary display",
+      "Action key",
+      "5000 mAh, 66W"
+    ],
+    "in_box": [
+      "Phone",
+      "66W charger",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-10-04"
+  },
+  {
+    "id": "P115",
+    "title": "Apple iPhone 15 (128GB)",
+    "brand": "Apple",
+    "category": "mobiles",
+    "price": 59900,
+    "mrp": 69900,
+    "rating": 4.6,
+    "rating_count": 40200,
+    "units_sold_7d": 870,
+    "views_7d": 57300,
+    "stock": 35,
+    "is_5g": true,
+    "ram_gb": 6,
+    "storage_gb": 128,
+    "colors": [
+      "Black",
+      "Blue",
+      "Green",
+      "Yellow",
+      "Pink"
+    ],
+    "highlights": [
+      "Dynamic Island",
+      "48MP main camera",
+      "USB-C",
+      "A16 Bionic"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2023-09-22"
+  },
+  {
+    "id": "A201",
+    "title": "Samsung Galaxy S24 Silicone Case",
+    "brand": "Samsung",
+    "category": "accessories",
+    "price": 1499,
+    "mrp": 2999,
+    "rating": 4.2,
+    "rating_count": 3100,
+    "units_sold_7d": 210,
+    "views_7d": 5100,
+    "stock": 140,
+    "compatible_with": [
+      "P101"
+    ],
+    "warranty": "6 months",
+    "launch_date": "2024-01-17"
+  },
+  {
+    "id": "A202",
+    "title": "OnePlus Nord Buds 3 Pro (TWS Earbuds)",
+    "brand": "OnePlus",
+    "category": "audio",
+    "price": 2999,
+    "mrp": 3999,
+    "rating": 4.1,
+    "rating_count": 26400,
+    "units_sold_7d": 1450,
+    "views_7d": 38800,
+    "stock": 400,
+    "compatible_with": [],
+    "warranty": "1 year manufacturer warranty",
+    "launch_date": "2024-09-17"
+  },
+  {
+    "id": "A203",
+    "title": "VoltEdge 65W GaN USB-C Fast Charger",
+    "brand": "VoltEdge",
+    "category": "accessories",
+    "price": 1799,
+    "mrp": 2999,
+    "rating": 4.3,
+    "rating_count": 8700,
+    "units_sold_7d": 620,
+    "views_7d": 12400,
+    "stock": 260,
+    "compatible_with": [
+      "P101",
+      "P102",
+      "P103",
+      "P104",
+      "P105",
+      "P106",
+      "P107",
+      "P115"
+    ],
+    "warranty": "1 year",
+    "launch_date": "2025-02-01"
+  },
+  {
+    "id": "A204",
+    "title": "Tempered Glass Screen Guard for Pixel 9 (Pack of 2)",
+    "brand": "ShieldPro",
+    "category": "accessories",
+    "price": 499,
+    "mrp": 999,
+    "rating": 3.9,
+    "rating_count": 1800,
+    "units_sold_7d": 95,
+    "views_7d": 2300,
+    "stock": 500,
+    "compatible_with": [
+      "P103"
+    ],
+    "warranty": "None",
+    "launch_date": "2024-08-30"
+  },
+  {
+    "id": "A205",
+    "title": "Spigen Ultra Hybrid Case for iPhone 16",
+    "brand": "Spigen",
+    "category": "accessories",
+    "price": 1299,
+    "mrp": 1999,
+    "rating": 4.5,
+    "rating_count": 6900,
+    "units_sold_7d": 330,
+    "views_7d": 7600,
+    "stock": 180,
+    "compatible_with": [
+      "P102"
+    ],
+    "warranty": "6 months",
+    "launch_date": "2024-09-20"
+  },
+  {
+    "id": "P116",
+    "title": "Samsung Galaxy S24 Ultra (12GB/256GB)",
+    "brand": "Samsung",
+    "category": "mobiles",
+    "price": 129999,
+    "mrp": 134999,
+    "rating": 4.6,
+    "rating_count": 8900,
+    "units_sold_7d": 410,
+    "views_7d": 39800,
+    "stock": 22,
+    "launch_date": "2024-01-17",
+    "highlights": [
+      "6.8\" QHD+ 120Hz",
+      "200MP quad camera",
+      "S Pen built in",
+      "Titanium frame"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable",
+      "S Pen"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 12,
+    "storage_gb": 256,
+    "colors": [
+      "Titanium Black",
+      "Titanium Gray",
+      "Titanium Violet"
+    ]
+  },
+  {
+    "id": "P117",
+    "title": "Apple iPhone 16 Pro (128GB)",
+    "brand": "Apple",
+    "category": "mobiles",
+    "price": 119900,
+    "mrp": 119900,
+    "rating": 4.7,
+    "rating_count": 12000,
+    "units_sold_7d": 620,
+    "views_7d": 68100,
+    "stock": 30,
+    "launch_date": "2024-09-20",
+    "highlights": [
+      "6.3\" ProMotion",
+      "48MP Fusion + 5x telephoto",
+      "A18 Pro",
+      "Titanium design"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Desert Titanium",
+      "Natural Titanium",
+      "Black Titanium"
+    ]
+  },
+  {
+    "id": "P118",
+    "title": "OnePlus 13 (12GB/256GB)",
+    "brand": "OnePlus",
+    "category": "mobiles",
+    "price": 69999,
+    "mrp": 72999,
+    "rating": 4.5,
+    "rating_count": 7400,
+    "units_sold_7d": 530,
+    "views_7d": 31200,
+    "stock": 40,
+    "launch_date": "2025-01-07",
+    "highlights": [
+      "Snapdragon 8 Elite",
+      "Hasselblad triple 50MP",
+      "6000 mAh, 100W"
+    ],
+    "in_box": [
+      "Phone",
+      "100W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 12,
+    "storage_gb": 256,
+    "colors": [
+      "Black Eclipse",
+      "Midnight Ocean"
+    ]
+  },
+  {
+    "id": "P119",
+    "title": "Google Pixel 9a (8GB/128GB)",
+    "brand": "Google",
+    "category": "mobiles",
+    "price": 49999,
+    "mrp": 52999,
+    "rating": 4.4,
+    "rating_count": 3100,
+    "units_sold_7d": 380,
+    "views_7d": 18900,
+    "stock": 26,
+    "launch_date": "2025-04-10",
+    "highlights": [
+      "Tensor G4",
+      "48MP main camera",
+      "IP68",
+      "7 years OS updates"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Obsidian",
+      "Porcelain",
+      "Iris"
+    ]
+  },
+  {
+    "id": "P120",
+    "title": "Nothing Phone (3) (12GB/256GB)",
+    "brand": "Nothing",
+    "category": "mobiles",
+    "price": 44999,
+    "mrp": 49999,
+    "rating": 4.3,
+    "rating_count": 2900,
+    "units_sold_7d": 450,
+    "views_7d": 22400,
+    "stock": 35,
+    "launch_date": "2025-07-01",
+    "highlights": [
+      "Glyph Matrix",
+      "50MP periscope",
+      "Snapdragon 8s Gen 4"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 12,
+    "storage_gb": 256,
+    "colors": [
+      "Black",
+      "White"
+    ]
+  },
+  {
+    "id": "P121",
+    "title": "Xiaomi 14 Civi (8GB/256GB)",
+    "brand": "Xiaomi",
+    "category": "mobiles",
+    "price": 42999,
+    "mrp": 49999,
+    "rating": 4.2,
+    "rating_count": 4100,
+    "units_sold_7d": 300,
+    "views_7d": 15600,
+    "stock": 50,
+    "launch_date": "2024-06-12",
+    "highlights": [
+      "Leica optics",
+      "32MP dual selfie",
+      "AMOLED 120Hz"
+    ],
+    "in_box": [
+      "Phone",
+      "67W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 256,
+    "colors": [
+      "Cruise Blue",
+      "Matcha Green",
+      "Shadow Black"
+    ]
+  },
+  {
+    "id": "P122",
+    "title": "Samsung Galaxy Z Flip6 (12GB/256GB)",
+    "brand": "Samsung",
+    "category": "mobiles",
+    "price": 109999,
+    "mrp": 109999,
+    "rating": 4.3,
+    "rating_count": 3600,
+    "units_sold_7d": 210,
+    "views_7d": 20400,
+    "stock": 15,
+    "launch_date": "2024-07-10",
+    "highlights": [
+      "Foldable 6.7\" 120Hz",
+      "3.4\" cover screen",
+      "50MP camera"
+    ],
+    "in_box": [
+      "Phone",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 12,
+    "storage_gb": 256,
+    "colors": [
+      "Blue",
+      "Mint",
+      "Silver Shadow"
+    ]
+  },
+  {
+    "id": "P123",
+    "title": "Redmi 13C 5G (4GB/128GB)",
+    "brand": "Xiaomi",
+    "category": "mobiles",
+    "price": 9999,
+    "mrp": 12999,
+    "rating": 3.9,
+    "rating_count": 41000,
+    "units_sold_7d": 1100,
+    "views_7d": 52000,
+    "stock": 400,
+    "launch_date": "2023-12-06",
+    "highlights": [
+      "5000 mAh",
+      "90Hz display",
+      "Dimensity 6100+"
+    ],
+    "in_box": [
+      "Phone",
+      "18W charger",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 4,
+    "storage_gb": 128,
+    "colors": [
+      "Starlight Black",
+      "Startrail Green"
+    ]
+  },
+  {
+    "id": "P124",
+    "title": "Motorola g85 5G (8GB/128GB)",
+    "brand": "Motorola",
+    "category": "mobiles",
+    "price": 17999,
+    "mrp": 19999,
+    "rating": 3.9,
+    "rating_count": 6200,
+    "units_sold_7d": 410,
+    "views_7d": 17700,
+    "stock": 90,
+    "launch_date": "2024-07-10",
+    "highlights": [
+      "pOLED 120Hz",
+      "50MP Sony OIS",
+      "IP52"
+    ],
+    "in_box": [
+      "Phone",
+      "33W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "colors": [
+      "Cobalt Blue",
+      "Olive Green"
+    ]
+  },
+  {
+    "id": "P125",
+    "title": "Realme 13 Pro 5G (8GB/256GB)",
+    "brand": "Realme",
+    "category": "mobiles",
+    "price": 26999,
+    "mrp": 29999,
+    "rating": 4.2,
+    "rating_count": 8800,
+    "units_sold_7d": 700,
+    "views_7d": 29300,
+    "stock": 75,
+    "launch_date": "2024-07-30",
+    "highlights": [
+      "50MP Sony LYT-600 OIS",
+      "Curved AMOLED",
+      "5200 mAh"
+    ],
+    "in_box": [
+      "Phone",
+      "45W charger",
+      "USB-C cable",
+      "Case"
+    ],
+    "warranty": "1 year manufacturer warranty",
+    "is_5g": true,
+    "ram_gb": 8,
+    "storage_gb": 256,
+    "colors": [
+      "Monet Gold",
+      "Emerald Green"
+    ]
+  },
+  {
+    "id": "T301",
+    "title": "Apple iPad (10th gen, Wi-Fi, 64GB)",
+    "brand": "Apple",
+    "category": "tablets",
+    "price": 34900,
+    "mrp": 39900,
+    "rating": 4.6,
+    "rating_count": 15800,
+    "units_sold_7d": 360,
+    "views_7d": 21000,
+    "stock": 40,
+    "launch_date": "2022-10-26",
+    "highlights": [
+      "10.9\" Liquid Retina",
+      "A14 Bionic",
+      "USB-C"
+    ],
+    "in_box": [
+      "iPad",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "T302",
+    "title": "Samsung Galaxy Tab S9 FE (6GB/128GB)",
+    "brand": "Samsung",
+    "category": "tablets",
+    "price": 36999,
+    "mrp": 44999,
+    "rating": 4.4,
+    "rating_count": 5200,
+    "units_sold_7d": 210,
+    "views_7d": 11800,
+    "stock": 32,
+    "launch_date": "2023-10-04",
+    "highlights": [
+      "10.9\" 90Hz",
+      "S Pen included",
+      "IP68"
+    ],
+    "in_box": [
+      "Tablet",
+      "S Pen",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "T303",
+    "title": "Xiaomi Pad 6 (8GB/256GB)",
+    "brand": "Xiaomi",
+    "category": "tablets",
+    "price": 26999,
+    "mrp": 29999,
+    "rating": 4.4,
+    "rating_count": 9700,
+    "units_sold_7d": 300,
+    "views_7d": 14100,
+    "stock": 55,
+    "launch_date": "2023-06-13",
+    "highlights": [
+      "11\" 2.8K 144Hz",
+      "Snapdragon 870",
+      "8840 mAh"
+    ],
+    "in_box": [
+      "Tablet",
+      "33W charger",
+      "USB-C cable"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "L401",
+    "title": "Apple MacBook Air 13\" M3 (8GB/256GB)",
+    "brand": "Apple",
+    "category": "laptops",
+    "price": 114900,
+    "mrp": 114900,
+    "rating": 4.7,
+    "rating_count": 6100,
+    "units_sold_7d": 140,
+    "views_7d": 24800,
+    "stock": 18,
+    "launch_date": "2024-03-08",
+    "highlights": [
+      "M3 chip",
+      "18-hour battery",
+      "Liquid Retina"
+    ],
+    "in_box": [
+      "Laptop",
+      "30W adapter",
+      "USB-C to MagSafe cable"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "L402",
+    "title": "ASUS Vivobook 15 OLED (Ryzen 7/16GB/512GB)",
+    "brand": "ASUS",
+    "category": "laptops",
+    "price": 59990,
+    "mrp": 74990,
+    "rating": 4.2,
+    "rating_count": 2700,
+    "units_sold_7d": 95,
+    "views_7d": 9300,
+    "stock": 24,
+    "launch_date": "2024-05-20",
+    "highlights": [
+      "15.6\" FHD OLED",
+      "Ryzen 7 7730U",
+      "Backlit keyboard"
+    ],
+    "in_box": [
+      "Laptop",
+      "65W adapter"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "L403",
+    "title": "HP Pavilion x360 14 (i5/16GB/512GB)",
+    "brand": "HP",
+    "category": "laptops",
+    "price": 69990,
+    "mrp": 82990,
+    "rating": 4.1,
+    "rating_count": 1900,
+    "units_sold_7d": 70,
+    "views_7d": 7200,
+    "stock": 0,
+    "launch_date": "2024-04-02",
+    "highlights": [
+      "2-in-1 touch",
+      "Core i5 1335U",
+      "Fast charge"
+    ],
+    "in_box": [
+      "Laptop",
+      "65W adapter",
+      "Pen"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "W501",
+    "title": "Apple Watch SE (2nd gen, GPS, 40mm)",
+    "brand": "Apple",
+    "category": "wearables",
+    "price": 29900,
+    "mrp": 29900,
+    "rating": 4.6,
+    "rating_count": 11200,
+    "units_sold_7d": 280,
+    "views_7d": 16900,
+    "stock": 60,
+    "launch_date": "2023-09-22",
+    "highlights": [
+      "Crash detection",
+      "Heart-rate notifications",
+      "Water resistant 50m"
+    ],
+    "in_box": [
+      "Watch",
+      "Sport band",
+      "Magnetic charger"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "W502",
+    "title": "Samsung Galaxy Watch7 (40mm, BT)",
+    "brand": "Samsung",
+    "category": "wearables",
+    "price": 32999,
+    "mrp": 36999,
+    "rating": 4.3,
+    "rating_count": 3800,
+    "units_sold_7d": 160,
+    "views_7d": 9100,
+    "stock": 45,
+    "launch_date": "2024-07-10",
+    "highlights": [
+      "BioActive sensor",
+      "Wear OS",
+      "Sapphire glass"
+    ],
+    "in_box": [
+      "Watch",
+      "Band",
+      "Wireless charger"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "W503",
+    "title": "Noise ColorFit Pro 6",
+    "brand": "Noise",
+    "category": "wearables",
+    "price": 3499,
+    "mrp": 6999,
+    "rating": 3.9,
+    "rating_count": 24000,
+    "units_sold_7d": 900,
+    "views_7d": 31500,
+    "stock": 320,
+    "launch_date": "2024-08-20",
+    "highlights": [
+      "1.85\" AMOLED",
+      "Bluetooth calling",
+      "7-day battery"
+    ],
+    "in_box": [
+      "Watch",
+      "Charger"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "W504",
+    "title": "boAt Lunar Discovery",
+    "brand": "boAt",
+    "category": "wearables",
+    "price": 1799,
+    "mrp": 7499,
+    "rating": 3.8,
+    "rating_count": 52000,
+    "units_sold_7d": 1250,
+    "views_7d": 40100,
+    "stock": 600,
+    "launch_date": "2023-11-02",
+    "highlights": [
+      "1.39\" HD display",
+      "BT calling",
+      "IP67"
+    ],
+    "in_box": [
+      "Watch",
+      "Charger"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "A206",
+    "title": "Sony WH-1000XM5 Headphones",
+    "brand": "Sony",
+    "category": "audio",
+    "price": 29990,
+    "mrp": 34990,
+    "rating": 4.6,
+    "rating_count": 9800,
+    "units_sold_7d": 240,
+    "views_7d": 14600,
+    "stock": 38,
+    "launch_date": "2022-05-20",
+    "highlights": [
+      "Industry-leading ANC",
+      "30-hour battery",
+      "Multipoint"
+    ],
+    "in_box": [
+      "Headphones",
+      "Case",
+      "USB-C cable",
+      "Audio cable"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "A207",
+    "title": "Apple AirPods Pro (2nd gen, USB-C)",
+    "brand": "Apple",
+    "category": "audio",
+    "price": 24900,
+    "mrp": 24900,
+    "rating": 4.7,
+    "rating_count": 30100,
+    "units_sold_7d": 890,
+    "views_7d": 48700,
+    "stock": 110,
+    "launch_date": "2023-09-22",
+    "highlights": [
+      "Active noise cancellation",
+      "Adaptive audio",
+      "MagSafe case"
+    ],
+    "in_box": [
+      "AirPods",
+      "Case",
+      "USB-C cable",
+      "Ear tips"
+    ],
+    "warranty": "1 year manufacturer warranty"
+  },
+  {
+    "id": "A208",
+    "title": "boAt Airdopes 141",
+    "brand": "boAt",
+    "category": "audio",
+    "price": 1299,
+    "mrp": 4490,
+    "rating": 4.0,
+    "rating_count": 210000,
+    "units_sold_7d": 1900,
+    "views_7d": 88000,
+    "stock": 900,
+    "launch_date": "2022-01-10",
+    "highlights": [
+      "42-hour playback",
+      "ENx calls",
+      "IPX4"
+    ],
+    "in_box": [
+      "Earbuds",
+      "Case",
+      "USB-C cable"
+    ],
+    "warranty": "1 year"
+  },
+  {
+    "id": "A209",
+    "title": "Anker 20000mAh Power Bank (22.5W)",
+    "brand": "Anker",
+    "category": "accessories",
+    "price": 2999,
+    "mrp": 4999,
+    "rating": 4.4,
+    "rating_count": 17600,
+    "units_sold_7d": 520,
+    "views_7d": 12800,
+    "stock": 350,
+    "launch_date": "2024-02-15",
+    "highlights": [
+      "22.5W fast charging",
+      "Two USB-A + one USB-C"
+    ],
+    "in_box": [
+      "Power bank",
+      "USB-C cable"
+    ],
+    "warranty": "18 months",
+    "compatible_with": []
+  },
+  {
+    "id": "A210",
+    "title": "Apple 20W USB-C Power Adapter",
+    "brand": "Apple",
+    "category": "accessories",
+    "price": 1900,
+    "mrp": 1900,
+    "rating": 4.5,
+    "rating_count": 45000,
+    "units_sold_7d": 610,
+    "views_7d": 15200,
+    "stock": 280,
+    "launch_date": "2020-10-13",
+    "highlights": [
+      "20W fast charging"
+    ],
+    "in_box": [
+      "Adapter"
+    ],
+    "warranty": "1 year",
+    "compatible_with": [
+      "P102",
+      "P115",
+      "P117"
+    ]
+  },
+  {
+    "id": "A211",
+    "title": "Ringke Fusion Case for Galaxy S24 Ultra",
+    "brand": "Ringke",
+    "category": "accessories",
+    "price": 1199,
+    "mrp": 1999,
+    "rating": 4.3,
+    "rating_count": 2300,
+    "units_sold_7d": 90,
+    "views_7d": 2600,
+    "stock": 160,
+    "launch_date": "2024-01-25",
+    "highlights": [
+      "Clear back",
+      "Military drop protection"
+    ],
+    "in_box": [
+      "Case"
+    ],
+    "warranty": "6 months",
+    "compatible_with": [
+      "P116"
+    ]
+  }
 ]
