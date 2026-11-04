@@ -7,10 +7,18 @@ RUN npm ci
 COPY frontend/ ./
 RUN npm run build
 
-FROM node:22-slim
+# better-sqlite3 is native: compile it where build tools exist...
+FROM node:22-slim AS deps
+RUN apt-get update && apt-get install -y --no-install-recommends python3 make g++ \
+	&& rm -rf /var/lib/apt/lists/*
 WORKDIR /app/backend
 COPY backend/package*.json ./
-RUN npm ci && npm cache clean --force
+RUN npm ci
+
+# ...then ship only the result in a slim image.
+FROM node:22-slim
+WORKDIR /app/backend
+COPY --from=deps /app/backend/node_modules ./node_modules
 COPY backend/ ./
 COPY --from=web /app/frontend/dist /app/frontend/dist
 ENV DB_PATH=/data/enzovo.db CHECKPOINT_DB_PATH=/data/checkpoints.db PORT=3000
