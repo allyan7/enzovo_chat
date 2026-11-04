@@ -29,6 +29,11 @@ describe('enzovo MCP server', () => {
 		expect(tools).toHaveLength(13);
 		for (const t of tools) expect(Object.keys((t.inputSchema as any).properties ?? {})).not.toContain('customer_id');
 	});
+	it('accepts null for optional arguments (small models send them)', async () => {
+		const r = await call('track_order', { order_id: null });
+		expect(r.isError).toBe(false);
+		expect(r.text).toContain('ORD-1002');
+	});
 	it('write tools default to a dry-run preview', async () => {
 		const r = await call('cancel_order', { order_id: 'ORD-1004' });
 		expect(JSON.parse(r.text)).toMatchObject({ dry_run: true });
