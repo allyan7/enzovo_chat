@@ -4,6 +4,7 @@
 //                                      ├─ Send(specialist: order)   ─┼→ synthesize → END
 //                                      ├─ Send(specialist: payments)─┤
 //                                      └─ (off-topic) ───────────────┘
+//   specialist ── (claimed an action, no tool call) ──► action_retry ──► synthesize
 //
 // Memory tiers used here:
 //   thread  = `messages`, saved per thread_id by the SQLite checkpointer
@@ -33,6 +34,8 @@ export const State = Annotation.Root({
 		reducer: (a, b) => (b === null ? [] : [...a, ...b]) as AgentReply[],
 		default: () => [],
 	}),
+	// Set by the action guard when an agent claimed an action without a tool call.
+	retry: Annotation<{ agent: AgentName; messages: BaseMessage[] } | null>({ reducer: (_a, b) => b, default: () => null }),
 });
 type S = typeof State.State;
 
@@ -55,43 +58,55 @@ function fanOut(s: S) {
 	return s.routes.map((agent) => new Send('specialist', { ...s, routes: [agent] }));
 }
 
-/** One ReAct agent (LLM ⇄ tools loop) with only its own tools. */
-async function specialist(s: S, config: RunnableConfig) {
-	const agent = s.routes[0];
-	const react = createReactAgent({
+/** Builds the ReAct agent (LLM ⇄ tools loop) for one specialist, with only its own tools. */
+async function reactFor(s: S, agent: AgentName) {
+	return createReactAgent({
 		llm: chatModel(),
 		tools: await toolsFor(s.customerId, agent),
 		prompt: agentPrompt(agent, s.memory, s.activeOrderId),
 	});
-	// Only the last few user-facing turns: keeps a 14B model's context small.
-	const input = s.messages.slice(-6);
-	let out = await react.invoke({ messages: input }, config);
-	let newMsgs: BaseMessage[] = out.messages.slice(input.length);
+}
 
-	// Action guard: small models sometimes SAY "cancelled" without calling the
-	// tool. If the customer asked for an action and no tool ran, retry once
-	// with an explicit nudge. Never trust a claimed action without a tool call.
-	const calledTool = newMsgs.some((m) => (m as AIMessage).tool_calls?.length);
-	if (!calledTool && agent === 'order' && ACTION_ASK.test(lastHuman(s.messages))) {
-		const nudge = new HumanMessage(`You did not call any tool, so nothing happened. Call the right tool now${s.activeOrderId ? ` (the order is ${s.activeOrderId})` : ''}.`);
-		out = await react.invoke({ messages: [...input, ...newMsgs, nudge] }, config);
-		newMsgs = out.messages.slice(input.length + newMsgs.length + 1);
-		if (!newMsgs.some((m) => (m as AIMessage).tool_calls?.length)) {
-			newMsgs = [new AIMessage("Sorry, I couldn't complete that. Please try again, mentioning the order id.")];
-			out = { ...out, messages: [...out.messages, ...newMsgs] };
-		}
-	}
+const toolCalls = (msgs: BaseMessage[]) => msgs.flatMap((m) => (m as AIMessage).tool_calls?.map((t) => t.name) ?? []);
+
+/** Turns an agent run into a reply + working-memory update. */
+function toReply(agent: AgentName, all: BaseMessage[], newMsgs: BaseMessage[]) {
 	const toolText = newMsgs.filter((m) => m.getType() === 'tool').map((m) => String(m.content)).join(' ');
 	const orderIds = toolText.match(/ORD-\d+/g);
 	return {
-		replies: [{
-			agent,
-			text: String(out.messages.at(-1)?.content ?? ''),
-			tools: newMsgs.flatMap((m) => (m as AIMessage).tool_calls?.map((t) => t.name) ?? []),
-		}],
+		replies: [{ agent, text: String(all.at(-1)?.content ?? ''), tools: toolCalls(newMsgs) }],
 		// Working memory: remember the order we just talked about, for "cancel it".
-		activeOrderId: orderIds?.length === 1 || new Set(orderIds).size === 1 ? orderIds![0] : undefined,
+		activeOrderId: orderIds && new Set(orderIds).size === 1 ? orderIds[0] : undefined,
 	};
+}
+
+// Each node runs the agent exactly ONCE. LangGraph resumes an interrupt by
+// re-running the node, so two agent runs in one node replay the wrong one.
+async function specialist(s: S, config: RunnableConfig) {
+	const agent = s.routes[0];
+	// Only the last few user-facing turns: keeps a 14B model's context small.
+	const input = s.messages.slice(-6);
+	const out = await (await reactFor(s, agent)).invoke({ messages: input }, config);
+	const newMsgs: BaseMessage[] = out.messages.slice(input.length);
+
+	// Action guard: small models sometimes SAY "cancelled" without calling the
+	// tool. If the customer asked for an action and no tool ran, hand over to
+	// the `retry` node instead of trusting the claim.
+	if (agent === 'order' && !toolCalls(newMsgs).length && ACTION_ASK.test(lastHuman(s.messages))) {
+		const nudge = new HumanMessage(`You did not call any tool, so nothing happened. Call the right tool now${s.activeOrderId ? ` (the order is ${s.activeOrderId})` : ''}.`);
+		return { retry: { agent, messages: [...input, ...newMsgs, nudge] } };
+	}
+	return toReply(agent, out.messages, newMsgs);
+}
+
+async function retry(s: S, config: RunnableConfig) {
+	const { agent, messages } = s.retry!;
+	const out = await (await reactFor(s, agent)).invoke({ messages }, config);
+	const newMsgs: BaseMessage[] = out.messages.slice(messages.length);
+	if (!toolCalls(newMsgs).length) {
+		return { retry: null, replies: [{ agent, text: "Sorry, I couldn't complete that. Please try again, mentioning the order id.", tools: [] }] };
+	}
+	return { ...toReply(agent, out.messages, newMsgs), retry: null };
 }
 
 async function synthesize(s: S) {
@@ -109,11 +124,13 @@ export function buildGraph(checkpointer: BaseCheckpointSaver) {
 		.addNode('load_context', loadContext)
 		.addNode('supervisor', supervisor)
 		.addNode('specialist', specialist)
+		.addNode('action_retry', retry)
 		.addNode('synthesize', synthesize)
 		.addEdge(START, 'load_context')
 		.addEdge('load_context', 'supervisor')
 		.addConditionalEdges('supervisor', fanOut, ['specialist', 'synthesize'])
-		.addEdge('specialist', 'synthesize')
+		.addConditionalEdges('specialist', (s: S) => (s.retry ? 'action_retry' : 'synthesize'), ['action_retry', 'synthesize'])
+		.addEdge('action_retry', 'synthesize')
 		.addEdge('synthesize', END)
 		.compile({ checkpointer });
 }
