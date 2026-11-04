@@ -41,9 +41,9 @@ export function buildServer(customerId: string) {
 	};
 
 	server.registerTool('search_products', {
-		description: 'Search the catalog with exact filters. Use sort="trending" for trending/popular, min_rating for "rated 4+", max_price for budgets. Returns up to 10 products.',
+		description: 'Search the catalog with exact filters. Phones = category "mobiles". Use sort="trending" for trending/popular, min_rating for "rated 4+", max_price for budgets. Returns total_matching plus up to 10 products (use limit 5 by default).',
 		inputSchema: {
-			query: z.string().optional().describe('Free text, e.g. "iphone" or "samsung case"'),
+			query: z.string().optional().describe('Only a product or brand name, e.g. "iphone", "galaxy s24". Leave empty for generic asks like "phones"; use category instead.'),
 			category: z.enum(['mobiles', 'accessories', 'audio']).optional(),
 			brand: z.string().optional(),
 			min_rating: z.number().min(0).max(5).optional(),

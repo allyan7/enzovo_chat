@@ -27,6 +27,11 @@ describe('Catalog', () => {
 		const r = searchProducts(as('CUST-001'), { category: 'mobiles', sort: 'trending', limit: 3 });
 		expect(r.products.map((p) => p.id)).toEqual(['P106', 'P105', 'P102']);
 	});
+	it('ignores generic words like "phones" in the free-text query', () => {
+		const r = searchProducts(as('CUST-001'), { query: 'phones rated 4+', category: 'mobiles', min_rating: 4, max_price: 25000, limit: 10 });
+		expect(r.total_matching).toBe(6);
+		expect(r.products.map((p) => p.id)).toContain('P112');
+	});
 	it('filters phones rated 4+', () => {
 		const r = searchProducts(as('CUST-001'), { category: 'mobiles', min_rating: 4, limit: 10 });
 		expect(r.products.every((p) => p.rating >= 4)).toBe(true);

@@ -40,13 +40,19 @@ const summary = (r: any) => ({
 	in_stock: r.stock > 0,
 });
 
+// Generic words a model often puts in `query` ("phones rated 4+"). Matching them
+// against titles would wrongly narrow results to e.g. "Nothing Phone".
+const GENERIC = new Set(['phone', 'phones', 'mobile', 'mobiles', 'smartphone', 'smartphones', 'best',
+	'good', 'top', 'cheap', 'under', 'below', 'rated', 'rating', 'stars', 'star', 'trending', 'popular',
+	'show', 'me', 'all', 'products', 'product', 'with', 'and', 'for', 'the', '5g']);
+
 export function searchProducts({ db }: Ctx, input: SearchInput) {
 	const where: string[] = [];
 	const args: unknown[] = [];
 	const add = (sql: string, v: unknown) => (where.push(sql), args.push(v));
 
 	if (input.query) {
-		for (const word of input.query.toLowerCase().split(/\s+/).filter(Boolean)) {
+		for (const word of input.query.toLowerCase().split(/[\s,]+/).filter((w) => w && !GENERIC.has(w) && !/^[\d₹+.,k]+$/.test(w))) {
 			add("lower(title || ' ' || brand) LIKE ?", `%${word}%`);
 		}
 	}
@@ -64,11 +70,12 @@ export function searchProducts({ db }: Ctx, input: SearchInput) {
 		);
 	}
 
-	const sql = `SELECT * FROM products
-		${where.length ? 'WHERE ' + where.join(' AND ') : ''}
-		ORDER BY ${SORTS[input.sort ?? 'trending']} LIMIT ?`;
-	const rows = db.prepare(sql).all(...args, Math.min(input.limit ?? 5, 10));
-	return { count: rows.length, products: rows.map(summary) };
+	const filter = where.length ? 'WHERE ' + where.join(' AND ') : '';
+	const total = (db.prepare(`SELECT COUNT(*) AS n FROM products ${filter}`).get(...args) as { n: number }).n;
+	const rows = db.prepare(`SELECT * FROM products ${filter}
+		ORDER BY ${SORTS[input.sort ?? 'trending']} LIMIT ?`).all(...args, Math.min(input.limit ?? 5, 10));
+	// total_matching answers "how many products do you have?" without listing everything.
+	return { total_matching: total, showing: rows.length, products: rows.map(summary) };
 }
 
 export function getProduct({ db }: Ctx, productId: string) {
