@@ -11,7 +11,7 @@ Read top to bottom once, then use the headings as a revision sheet. Every sectio
 1. `frontend/src/hooks/useChat.ts` → `POST /api/chat` with header `x-customer-id`.
 2. `backend/middlewares/session/session.ts`: identity is decided **here**, before any LLM.
 3. `backend/modules/Agents/Agents.module.ts → chat()`: invokes the graph with `thread_id = customer:thread`.
-4. `graph.ts`: `load_context` (memory) → `supervisor` (route) → `Send` to specialists in parallel → `synthesize`.
+4. `graph.ts`: `load_context` (memory) → `supervisor` (route) → `Send` to specialists in parallel → (`action_retry` if an agent claimed an action without a tool call) → `synthesize`.
 5. Each specialist = `createReactAgent` (LLM ⇄ tools loop) with **only its tool group** (`tools.ts`).
 6. Tools come from the **MCP server** over stdio (`mcp/enzovo.mcp.ts`), bound to one customer.
 7. MCP tools call **modules** (`modules/Orders` etc.), which run SQL on SQLite.
@@ -73,6 +73,18 @@ Read top to bottom once, then use the headings as a revision sheet. Every sectio
 - **Observability:** each reply returns `trace {agents, tools}` and latency, shown in the UI. Production: Langfuse/LangSmith tracing.
 - **Testing:** 20 tests, no LLM: business rules, MCP protocol, stdio tool groups, and the **full graph with a scripted model** including interrupt/resume (`tests/graph.test.ts`).
 - **CI/CD:** `ci.yml` (seed validation, typecheck, tests, frontend build) on every push/PR; `cd.yml` builds a Docker image (API + UI) and pushes to GHCR after CI passes on main.
+
+## 8b. Bugs found with the real model (and the lesson from each)
+| Symptom | Root cause (found in `checkpoints.db`) | Fix | Lesson |
+|---|---|---|---|
+| "Phones rated 4+ under ₹25k" → 1 result | Qwen put "phones rated" in `query`; LIKE matched only "Nothing **Phone**" | Ignore generic words; better tool description | Bugs live in tool **arguments** more than routing |
+| "Where is my order?" → "no orders" | `order_id: null` failed schema validation; agent invented an answer | Optional args accept null; "never infer no-data from an error" | Make tools tolerant; errors must not become answers |
+| "Cancel it" → "cancelled", nothing happened | Model narrated the action, **no tool call** | Action guard → `action_retry` node; honest failure message | Never trust a claimed action; check the trace in code |
+| Buy reply quoted the old balance as price | Routed to order **and** payments; merge mixed answers | Buy/cancel route only to order agent | More agents ≠ better; route actions to one owner |
+| Retry + confirmation replayed the wrong run | Two agent runs in one node; LangGraph resumes by re-running the node | One agent run per node | Interrupt/resume semantics shape graph design |
+| Slow first replies | Different `num_ctx` → Ollama reloaded the model | Same `num_ctx`, keepAlive, keyword fast path | Measure where time goes before tuning prompts |
+
+How to debug: open `backend/checkpoints.db`, table `writes`, filter by `thread_id = 'CUST-00X:<thread>'`. Every tool call and result is there.
 
 ## 9. Likely interview questions
 1. **Why not one big agent?** See §3: least privilege, reliability with small models, parallelism. Admit it's a trade-off.
