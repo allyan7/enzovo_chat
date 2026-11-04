@@ -47,15 +47,20 @@ export async function chat(turn: ChatTurn): Promise<ChatResult> {
 }
 
 /** Background memory extraction: runs after the reply, so the user never waits. */
+// Only messages that state something about the customer are worth an LLM call.
+const HAS_FACT = /\b(prefer|always|usually|budget|i like|i love|i use|i own|i have|my (phone|budget|brand)|language|hindi|tamil|don't like|never)\b/i;
+
 async function rememberTurn(customerId: string, user: string, assistant: string) {
+	// Episode: a cheap one-liner, no LLM needed.
+	addEpisode(getDb(), customerId, `asked: ${user.slice(0, 120)}`);
+	if (!HAS_FACT.test(user)) return; // skip the extraction call (keeps Ollama free for the next message)
 	try {
 		const res = await jsonModel().invoke([
 			['system', MEMORY_PROMPT],
 			['user', `Customer: ${user}\nAssistant: ${assistant}`],
 		]);
-		const { facts = [], summary } = parseJson<{ facts?: { key: string; value: string }[]; summary?: string }>(String(res.content), {});
+		const { facts = [] } = parseJson<{ facts?: { key: string; value: string }[] }>(String(res.content), {});
 		for (const f of facts.slice(0, 3)) if (f?.key && f?.value) upsertFact(getDb(), customerId, f.key, String(f.value));
-		if (summary) addEpisode(getDb(), customerId, summary);
 	} catch { /* memory is best-effort */ }
 }
 

@@ -20,6 +20,11 @@ export function keywordRoute(text: string): AgentName[] {
 }
 
 export async function route(text: string, recentContext: string): Promise<AgentName[] | 'none'> {
+	// Fast path: a short message that clearly matches ONE agent skips the LLM
+	// router entirely (saves a full model call). Ambiguous or multi-intent
+	// messages, and follow-ups like "cancel it", still go to the LLM.
+	const quick = keywordRoute(text);
+	if (quick.length === 1 && text.length < 120 && !recentContext) return quick;
 	try {
 		const res = await jsonModel().invoke([
 			['system', ROUTER_PROMPT],
