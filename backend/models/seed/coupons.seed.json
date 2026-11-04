@@ -1,0 +1,6 @@
+[
+  { "code": "SAVE2000", "description": "Flat ₹2,000 off on mobiles", "type": "flat", "value": 2000, "min_order_value": 50000, "applies_to": ["mobiles"], "valid_until": "2026-12-31", "max_uses_per_customer": 1 },
+  { "code": "NEWPHONE5", "description": "5% off on mobiles, up to ₹1,500", "type": "percent", "value": 5, "max_discount": 1500, "min_order_value": 10000, "applies_to": ["mobiles"], "valid_until": "2026-12-31", "max_uses_per_customer": 2 },
+  { "code": "ACC10", "description": "10% off on accessories and audio, up to ₹500", "type": "percent", "value": 10, "max_discount": 500, "min_order_value": 999, "applies_to": ["accessories", "audio"], "valid_until": "2026-11-30", "max_uses_per_customer": 3 },
+  { "code": "DIWALI25", "description": "Festive offer — expired", "type": "flat", "value": 2500, "min_order_value": 30000, "applies_to": ["mobiles"], "valid_until": "2026-10-25", "max_uses_per_customer": 1 }
+]

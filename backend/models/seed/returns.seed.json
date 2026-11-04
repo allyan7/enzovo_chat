@@ -1,0 +1,26 @@
+[
+  {
+    "id": "RET-1003", "order_id": "ORD-1003", "customer_id": "CUST-001", "type": "return", "product_id": "A202",
+    "reason": "Left earbud not charging", "requested_at": "2026-10-20T18:30:00+05:30", "status": "completed",
+    "refund_destination_chosen": "wallet",
+    "timeline": [
+      { "time": "2026-10-20T18:30:00+05:30", "status": "Return requested" },
+      { "time": "2026-10-20T18:31:00+05:30", "status": "Return approved (within 10-day window)" },
+      { "time": "2026-10-24T13:00:00+05:30", "status": "Picked up" },
+      { "time": "2026-10-26T15:50:00+05:30", "status": "Quality check passed" },
+      { "time": "2026-10-26T16:05:00+05:30", "status": "Refund credited to wallet (RFD-1003)" }
+    ],
+    "refund_id": "RFD-1003"
+  },
+  {
+    "id": "RET-3002", "order_id": "ORD-3002", "customer_id": "CUST-003", "type": "replacement", "product_id": "P103",
+    "reason": "Display flickers at low brightness", "requested_at": "2026-11-02T21:00:00+05:30", "status": "pickup_scheduled",
+    "replacement": { "product_id": "P103", "color": "Obsidian", "reserved": true },
+    "pickup": { "date": "2026-11-05", "slot": "10:00–14:00", "address_id": "ADDR-003-O", "mode": "exchange_on_delivery", "note": "Technician checks the device at the door, then hands over the replacement unit" },
+    "timeline": [
+      { "time": "2026-11-02T21:00:00+05:30", "status": "Replacement requested" },
+      { "time": "2026-11-03T10:15:00+05:30", "status": "Remote diagnosis done — defect confirmed" },
+      { "time": "2026-11-03T10:20:00+05:30", "status": "Replacement approved; pickup and exchange scheduled for 2026-11-05" }
+    ]
+  }
+]

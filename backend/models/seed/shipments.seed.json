@@ -1,0 +1,55 @@
+[
+  {
+    "id": "SHP-1001", "order_id": "ORD-1001", "courier": "SwiftShip Logistics", "awb": "SS7712004561", "status": "delivered",
+    "dispatched_at": "2026-10-09T10:00:00+05:30", "expected_delivery": "2026-10-11", "delivered_at": "2026-10-11T14:20:00+05:30",
+    "events": [
+      { "time": "2026-10-09T10:00:00+05:30", "location": "Hoskote Fulfilment Centre", "status": "Dispatched" },
+      { "time": "2026-10-10T07:30:00+05:30", "location": "Bengaluru Koramangala Hub", "status": "Arrived at delivery hub" },
+      { "time": "2026-10-11T09:10:00+05:30", "location": "Bengaluru Koramangala Hub", "status": "Out for delivery" },
+      { "time": "2026-10-11T14:20:00+05:30", "location": "Bengaluru", "status": "Delivered (OTP verified)" }
+    ]
+  },
+  {
+    "id": "SHP-1002", "order_id": "ORD-1002", "courier": "SwiftShip Logistics", "awb": "SS7712009934", "status": "in_transit",
+    "dispatched_at": "2026-11-03T11:00:00+05:30", "expected_delivery": "2026-11-05", "delivered_at": null,
+    "events": [
+      { "time": "2026-11-03T11:00:00+05:30", "location": "Hoskote Fulfilment Centre", "status": "Dispatched" },
+      { "time": "2026-11-04T06:40:00+05:30", "location": "Bengaluru Koramangala Hub", "status": "Arrived at delivery hub" }
+    ]
+  },
+  {
+    "id": "SHP-1003", "order_id": "ORD-1003", "courier": "SwiftShip Logistics", "awb": "SS7712005120", "status": "delivered",
+    "dispatched_at": "2026-10-13T12:00:00+05:30", "expected_delivery": "2026-10-15", "delivered_at": "2026-10-15T11:45:00+05:30",
+    "events": [
+      { "time": "2026-10-13T12:00:00+05:30", "location": "Hoskote Fulfilment Centre", "status": "Dispatched" },
+      { "time": "2026-10-15T11:45:00+05:30", "location": "Bengaluru", "status": "Delivered" }
+    ]
+  },
+  {
+    "id": "SHP-2001", "order_id": "ORD-2001", "courier": "SwiftShip Logistics", "awb": "SS7712007788", "status": "delayed",
+    "dispatched_at": "2026-10-26T10:30:00+05:30", "expected_delivery": "2026-10-30", "revised_expected_delivery": "2026-11-06", "delivered_at": null,
+    "delay_reason": "Shipment held at Kochi hub due to heavy rain and waterlogging; road movement suspended by local authorities",
+    "events": [
+      { "time": "2026-10-26T10:30:00+05:30", "location": "Chennai Fulfilment Centre", "status": "Dispatched" },
+      { "time": "2026-10-28T16:00:00+05:30", "location": "Kochi Edappally Hub", "status": "Arrived at delivery hub" },
+      { "time": "2026-10-29T09:00:00+05:30", "location": "Kochi Edappally Hub", "status": "Held — weather disruption" },
+      { "time": "2026-11-03T18:00:00+05:30", "location": "Kochi Edappally Hub", "status": "Held — movement expected to resume 2026-11-05; revised ETA 2026-11-06" }
+    ]
+  },
+  {
+    "id": "SHP-3001", "order_id": "ORD-3001", "courier": "SwiftShip Logistics", "awb": "SS7712001010", "status": "delivered",
+    "dispatched_at": "2026-09-06T09:00:00+05:30", "expected_delivery": "2026-09-08", "delivered_at": "2026-09-08T12:30:00+05:30",
+    "events": [
+      { "time": "2026-09-06T09:00:00+05:30", "location": "Farukhnagar Fulfilment Centre", "status": "Dispatched" },
+      { "time": "2026-09-08T12:30:00+05:30", "location": "New Delhi", "status": "Delivered (OTP verified)" }
+    ]
+  },
+  {
+    "id": "SHP-3002", "order_id": "ORD-3002", "courier": "SwiftShip Logistics", "awb": "SS7712008211", "status": "delivered",
+    "dispatched_at": "2026-10-27T17:00:00+05:30", "expected_delivery": "2026-10-30", "delivered_at": "2026-10-29T17:10:00+05:30",
+    "events": [
+      { "time": "2026-10-27T17:00:00+05:30", "location": "Farukhnagar Fulfilment Centre", "status": "Dispatched" },
+      { "time": "2026-10-29T17:10:00+05:30", "location": "Gurugram", "status": "Delivered (OTP verified)" }
+    ]
+  }
+]

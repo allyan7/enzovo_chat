@@ -1,0 +1,13 @@
+{
+  "note": "Delivery days counted from dispatch. Orders placed before 2 PM dispatch the same day.",
+  "free_delivery_threshold": 499,
+  "delivery_fee_below_threshold": 49,
+  "pincodes": [
+    { "pincode": "560034", "city": "Bengaluru", "state": "Karnataka", "delivery_days": 2, "cod_available": true },
+    { "pincode": "560103", "city": "Bengaluru", "state": "Karnataka", "delivery_days": 2, "cod_available": true },
+    { "pincode": "682024", "city": "Kochi", "state": "Kerala", "delivery_days": 4, "cod_available": true },
+    { "pincode": "110017", "city": "New Delhi", "state": "Delhi", "delivery_days": 2, "cod_available": true },
+    { "pincode": "122002", "city": "Gurugram", "state": "Haryana", "delivery_days": 3, "cod_available": false },
+    { "pincode": "744101", "city": "Port Blair", "state": "Andaman and Nicobar", "delivery_days": 8, "cod_available": false }
+  ]
+}

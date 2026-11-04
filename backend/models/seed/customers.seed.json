@@ -1,0 +1,52 @@
+[
+  {
+    "id": "CUST-001",
+    "name": "Aarav Mehta",
+    "email": "aarav.mehta@example.com",
+    "phone": "+91-90000-00001",
+    "tier": "gold",
+    "member_since": "2023-06-14",
+    "kyc": "full",
+    "preferences": { "language": "en", "preferred_payment": "wallet" },
+    "saved_cards": [ { "card_ref": "CARD-A1", "network": "Visa", "last4": "4417", "status": "active" } ],
+    "saved_upi": ["aarav@okexample"],
+    "addresses": [
+      { "id": "ADDR-001-H", "label": "Home", "line1": "Flat 1204, Prestige Lakeside", "line2": "Koramangala 5th Block", "city": "Bengaluru", "state": "Karnataka", "pincode": "560034", "is_default": true },
+      { "id": "ADDR-001-O", "label": "Office", "line1": "Tower B, 6th Floor, Tech Park", "line2": "Outer Ring Road, Bellandur", "city": "Bengaluru", "state": "Karnataka", "pincode": "560103", "is_default": false }
+    ]
+  },
+  {
+    "id": "CUST-002",
+    "name": "Priya Nair",
+    "email": "priya.nair@example.com",
+    "phone": "+91-90000-00002",
+    "tier": "silver",
+    "member_since": "2025-02-03",
+    "kyc": "minimum",
+    "preferences": { "language": "en", "preferred_payment": "upi" },
+    "saved_cards": [ { "card_ref": "CARD-P1", "network": "RuPay", "last4": "8820", "status": "active" } ],
+    "saved_upi": ["priya.n@okexample"],
+    "addresses": [
+      { "id": "ADDR-002-H", "label": "Home", "line1": "House 22, Rose Garden Lane", "line2": "Panampilly Nagar", "city": "Kochi", "state": "Kerala", "pincode": "682024", "is_default": true }
+    ]
+  },
+  {
+    "id": "CUST-003",
+    "name": "Rohan Gupta",
+    "email": "rohan.gupta@example.com",
+    "phone": "+91-90000-00003",
+    "tier": "silver",
+    "member_since": "2024-01-22",
+    "kyc": "full",
+    "preferences": { "language": "hi-en", "preferred_payment": "card" },
+    "saved_cards": [
+      { "card_ref": "CARD-R1", "network": "Mastercard", "last4": "1093", "status": "closed" },
+      { "card_ref": "CARD-R2", "network": "Visa", "last4": "6411", "status": "active" }
+    ],
+    "saved_upi": [],
+    "addresses": [
+      { "id": "ADDR-003-H", "label": "Home", "line1": "C-45, Second Floor", "line2": "Malviya Nagar", "city": "New Delhi", "state": "Delhi", "pincode": "110017", "is_default": true },
+      { "id": "ADDR-003-O", "label": "Office", "line1": "DLF Cyber City, Building 10", "line2": "Phase 2", "city": "Gurugram", "state": "Haryana", "pincode": "122002", "is_default": false }
+    ]
+  }
+]

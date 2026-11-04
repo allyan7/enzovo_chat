@@ -1,0 +1,23 @@
+[
+  {
+    "id": "RFD-1003", "order_id": "ORD-1003", "customer_id": "CUST-001", "trigger": "return", "return_id": "RET-1003",
+    "amount": 2999, "destination": "wallet", "status": "completed",
+    "initiated_at": "2026-10-26T15:55:00+05:30", "completed_at": "2026-10-26T16:05:00+05:30",
+    "attempts": [ { "destination": "wallet", "status": "success", "time": "2026-10-26T16:05:00+05:30", "wallet_txn_id": "WTX-0004" } ]
+  },
+  {
+    "id": "RFD-2002", "order_id": "ORD-2002", "customer_id": "CUST-002", "trigger": "cancellation",
+    "amount": 13499, "destination": "original_source", "source_method": "upi", "status": "processing",
+    "initiated_at": "2026-10-31T09:45:00+05:30", "expected_by": "2026-11-05", "completed_at": null,
+    "attempts": [ { "destination": "upi:priya.n@okexample", "status": "sent_to_bank", "time": "2026-10-31T10:30:00+05:30", "gateway_ref": "GWR-88341207" } ]
+  },
+  {
+    "id": "RFD-3003", "order_id": "ORD-3003", "customer_id": "CUST-003", "trigger": "cancellation",
+    "amount": 2788, "destination": "original_source", "source_method": "card", "status": "completed_via_wallet",
+    "initiated_at": "2026-10-06T08:20:00+05:30", "completed_at": "2026-10-15T12:10:00+05:30",
+    "attempts": [
+      { "destination": "card:CARD-R1 (Mastercard ending 1093)", "status": "failed", "time": "2026-10-13T11:00:00+05:30", "failure_reason": "Card account closed by issuing bank" },
+      { "destination": "wallet", "status": "success", "time": "2026-10-15T12:10:00+05:30", "wallet_txn_id": "WTX-0202", "note": "Auto-rerouted to wallet per refund policy §6" }
+    ]
+  }
+]
